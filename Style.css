@@ -1,0 +1,42 @@
+/* Estilos para a seção Nossos Professores */
+.professors-section {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+  }
+  
+  .professor-card {
+    text-align: center;
+  }
+  
+  .professor-card img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  /* Estilos para a seção Modos de Treino */
+  .training-section {
+    background-color: #e9e9e9;
+    padding: 40px 0;
+  }
+  
+  .training-mode {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilos para a seção Valor da Academia */
+  .pricing-section {
+    background-color: #dcdcdc;
+    padding: 40px 0;
+  }
+  
+  /* Estilizando os botões */
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
