@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
   <link rel="stylesheet" href="CSS/Style.css">
-  <title>Senac Boxe</title>
+  <title>Senac Boxe - Valores</title>
   <link rel="icon" href="Imagens/boxe_logo.png" type="Logo">
 </head>
 <body>
@@ -84,53 +84,66 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-
-      <!-- Seção de Professores -->
-<section class="container mt-5 professors-section bg-dark text-white">
-  <h2 class="text-center">Nossos Professores</h2>
+    <!-- Seção de Planos de Adesão -->
+<section class="container mt-5 mb-5 pricing-section custom-section">
+  <h2 class="text-center text-danger mb-4">Nossos Planos de Adesão</h2>
   <div class="row">
     <div class="col-md-4">
-      <img src="Imagens/treinador_01.jpg" alt="Professor João" class="img-fluid rounded-circle">
-      <h4>Professor João Silva</h4>
-      <p>Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento físico e técnico.</p>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Plano Iniciante</h3>
+          <p class="card-text">Perfeito para iniciantes</p>
+          <p class="card-text">3 vezes por semana</p>
+          <h4 class="card-text text-danger">R$ 99,00/mês</h4>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
-      <img src="Imagens/teinador_02.jpg" alt="Professora Maria" class="img-fluid rounded-circle">
-      <h4>Professora Maria Santos</h4>
-      <p>A Professora Maria Santos é uma campeã nacional de boxe e está pronta para compartilhar suas habilidades com você.</p>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Plano Intermediário</h3>
+          <p class="card-text">Para aqueles que desejam um desafio</p>
+          <p class="card-text">5 vezes por semana</p>
+          <h4 class="card-text text-danger">R$ 149,00/mês</h4>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
-      <img src="Imagens/treinador_03.jpg" alt="Professor Carlos" class="img-fluid rounded-circle">
-      <h4>Professor Carlos Oliveira</h4>
-      <p>Professor Carlos Oliveira é um mestre em técnicas de defesa e está comprometido em tornar você um lutador completo.</p>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Plano Avançado</h3>
+          <p class="card-text">Para atletas sérios</p>
+          <p class="card-text">7 vezes por semana</p>
+          <h4 class="card-text text-danger">R$ 199,00/mês</h4>
+        </div>
+      </div>
     </div>
   </div>
+  <p class="text-center text-danger mt-4">Entre em contato para planos personalizados e informações adicionais.</p>
+  <form action="#" method="POST">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="text" class="form-control" id="nome" name="nome" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="mensagem" class="form-label">Mensagem:</label>
+      <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-danger">Enviar</button>
+  </form>
+</div>
+<div class="col-md-6">
+  
+</div>
+</div>
+</div>
 </section>
 
-<!-- Seção de Modos de Treino -->
-<section class="container mt-5 training-section bg-dark text-white">
-  <h2 class="text-center">Modos de Treino</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <h4>Treinamento Iniciante</h4>
-      <p>Para iniciantes, oferecemos aulas que focam na técnica básica, condicionamento físico e fundamentos do boxe.</p>
-    </div>
-    <div class="col-md-4">
-      <h4>Treinamento Avançado</h4>
-      <p>Para aqueles que desejam aprimorar suas habilidades, temos aulas avançadas com treinadores experientes.</p>
-    </div>
-    <div class="col-md-4">
-      <h4>Treinamento de Competição</h4>
-      <p>Se você deseja competir, nossa academia oferece treinamento especializado para prepará-lo para o ringue.</p>
-    </div>
-  </div>
-</section>
 
-<!-- Seção de Valor da Academia -->
-<section class="container mt-5 pricing-section bg-dark text-white pricing-section mb-4">
-  <h2 class="text-center">Valor da Academia</h2>
-  <p class="text-center">Nossos planos de adesão flexíveis permitem que você escolha a opção que melhor se adapte às suas necessidades. Entre em contato conosco para obter informações atualizadas sobre preços.</p>
-</section>
 
 <!-- Seção do Mapa -->
 <section class="map-section">
