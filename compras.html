@@ -12,6 +12,8 @@
 </head>
 <body>
   <script src="Script.js"></script>
+  
+  
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
@@ -35,6 +37,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="compras.html">Compras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin.html">Admin</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -183,6 +188,37 @@
   </div>
 </section>
 
+<!--Seção do Grafico-->
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<!--Espaço entre Grafico e Mapa-->
 <div class="mt-3"></div>
 
 <!-- Seção do Mapa -->

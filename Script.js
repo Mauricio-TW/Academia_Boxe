@@ -6,10 +6,33 @@
     bandagens: { name: 'Bandagem de Boxe', price: 14.99 },
     protetorCabeca: { name: 'Protetor de Cabeça', price: 49.99 },
     shortBoxe: { name: 'Short de Boxe', price: 34.99 }
-  };
+  }
+
+  const itemQuantities = {
+    luvas: 0,
+    protetorBucal: 0,
+    sacoPancada: 0,
+    bandagens: 0,
+    protetorCabeca: 0,
+    shortBoxe: 0,
+  }
 
   // Carrinho de compras
   const cart = [];
+
+  function addToCart(itemId) {
+    const item = items[itemId];
+    if (item) {
+      cart.push(item);
+      itemQuantities[itemId]++;
+      updateCart();
+    }
+  }
+  datasets: [{
+    label: 'Quantidade de Itens Comprados',
+    data: Object.values(itemQuantities), // Usa os valores de itemQuantities como dados
+    borderWidth: 1,
+  }]
 
   // Função para adicionar um item ao carrinho
   function addToCart(itemId) {
