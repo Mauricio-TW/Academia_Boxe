@@ -30,7 +30,7 @@
   }
   datasets: [{
     label: 'Quantidade de Itens Comprados',
-    data: Object.values(itemQuantities), // Usa os valores de itemQuantities como dados
+    data: Object.values(itemQuantities),
     borderWidth: 1,
   }]
 
