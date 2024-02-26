@@ -12,6 +12,65 @@
     max-width: 100%;
     border-radius: 50%;
   }
+
+  /*Seção Login */
+  .section_login {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+
+  .div_login {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  }
+
+  .formulario_login {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .formulario_login label {
+    color: #343a40;
+  }
+
+  .formulario_login input[type="email"],
+  .formulario_login input[type="password"] {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+  }
+
+  .formulario_login input[type="submit"] {
+    background-color: #dc3545;
+    border: none;
+    color: #ffffff;
+    transition: background-color 0.3s;
+  }
+
+  .formulario_login input[type="submit"]:hover {
+    background-color: #c82333;
+  }
+
+  .recuperar_login {
+    color: #6c757d;
+  }
+
+  .recuperar_login:hover {
+    color: #343a40;
+  }
+
+  .form-box {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .logo {
+    width: 230px;
+    height: auto;
+    margin-left: 20px;
+  }
   
   /* Estilos para a seção Modos de Treino */
   .training-section {
@@ -49,39 +108,37 @@
   }
   /* Icones do Footer */
   .social-icon i {
-    font-size: 24px; /* Tamanho dos ícones */
-    margin-right: 10px; /* Espaçamento entre os ícones */
+    font-size: 24px;
+    margin-right: 10px;
   }
-
-/*Captação de Clientes */
-.capture-section input[type="text"],
-.capture-section input[type="email"] {
-  width: 100%;
-  max-width: 450px;
-  padding: 10px;
-}
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Cor de fundo do footer */
+  }
 
 /* Estilos para as seções personalizadas */
 .professors-section,
 .training-section,
 .pricing-section {
-  background-color: #343a40; /* Cor de fundo da navbar e do footer */
-  color: #fff; /* Cor do texto */
-  padding: 40px; /* Espaçamento interno */
-  border-radius: 10px; /* Borda arredondada */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  background-color: #343a40;
+  color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 /* Estilize os títulos das seções */
 .professors-section h2,
 .training-section h2,
 .pricing-section h2 {
-  color: #dc3545; /* Cor do título */
+  color: #dc3545;
 }
 
 /* Estilize o texto dentro das seções */
 .professors-section p,
 .training-section p,
 .pricing-section p {
-  font-size: 18px; /* Tamanho da fonte */
+  font-size: 18px;
 }
