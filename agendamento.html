@@ -47,31 +47,34 @@
       </nav>      
 
 <!-- Seção Agendamento-->
+
 <div class="container mt-5">
-    <div class="card">
-      <div class="card-header bg-primary text-white">
-        Agendamento de Treino
-      </div>
-      <div class="card-body">
-        <form id="formulario-agendamento" action="agendamento.php" method="POST">
-          <div class="mb-3">
-            <label for="data" class="form-label">Data do Treino:</label>
-            <input type="date" id="data" name="data" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="professor" class="form-label">Professor:</label>
-            <select id="professor" name="professor" class="form-select" required>
-                <option value="" disabled selected>Selecione o Professor</option>
-              <option value="joao">Professor João</option>
-              <option value="maria">Professora Maria</option>
-              <option value="carlos">Professor Carlos</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary">Agendar Treino</button>
-        </form>
-      </div>
+  <h2 class="text-center">Agende Seu Treino Gratuito e Comece Sua Jornada de Melhoramento!</h2>
+  <div class="card">
+    <div class="card-header bg-danger text-white">
+      Agende Aqui o seu treino teste sem custo e comece sua jornada com a gente!
+    </div>
+    <div class="card-body">
+      <p>O treino pode ser marcado sem custos com o objetivo de experimentar. Aproveite tambem essa oportunidade para conhecer nossas instalações e profissionais!</p>
+      <form id="formulario-agendamento" action="agendamento.php" method="POST">
+        <div class="mb-3">
+          <label for="data" class="form-label">Data do Treino:</label>
+          <input type="date" id="data" name="data" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="professor" class="form-label">Professor:</label>
+          <select id="professor" name="professor" class="form-select" required>
+              <option value="" disabled selected>Selecione o Professor</option>
+            <option value="joao">Professor João</option>
+            <option value="maria">Professora Maria</option>
+            <option value="carlos">Professor Carlos</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-danger">Agendar Treino</button>
+      </form>
     </div>
   </div>
+</div>
   
   
 <!-- Seção do Footer -->

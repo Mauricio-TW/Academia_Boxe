@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
   <link rel="stylesheet" href="CSS/Style.css">
-  <title>Senac Boxe - Login</title>
+  <title>Senac Boxe - Recuparação de Senha</title>
   <link rel="icon" href="Imagens/boxe_logo.png" type="Logo">
 </head>
 <body>
@@ -26,16 +26,18 @@
   <!-- Seção Recuperar -->
   <section class="section_recuperar">
     <div class="container">
+      <h2 class="text-center">Recuperação de Senha</h2>
+      <p class="text-center">Digite o e-mail de sua conta no campo indicado abaixo e lhe enviaremos um e-mail com instruções para recuperação da sua senha.</p>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="div_recuperar">
-            <form class="formulario_recuperar" method="POST" action="recuperar_senha.php">
-              <div class="mb-3"></div> <!-- Espaçamento adicionado aqui -->
-              <label class="form-label espacamento_form" for="email_input">E-mail</E-mail>:</label>
+            <form class="formulario_recuperar" method="POST" action="recuperarSenha.php">
+              <div class="mb-3"></div>
+              <label class="form-label espacamento_form" for="email_input">E-mail:</label>
               <input class="form-control input_form" id="email_input" type="email" name="email_input" placeholder="Digite seu e-mail aqui" required>
-              <div class="div_botao_form">
-                <button class="espacamento_form btn btn-primary botao" type="submit">Enviar</button>
-                <a class="espacamento_form btn btn-secondary" href="login.html">Cancelar</a>
+              <div class="div_botao_form mt-3">
+                <button class="btn btn-primary botao" type="submit">Enviar</button>
+                <a class="btn btn-secondary" href="login.html">Cancelar</a>
               </div>
             </form>
           </div>
