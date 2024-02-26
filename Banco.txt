@@ -1,0 +1,31 @@
+CREATE DATABASE academia_boxe;
+
+USE academia_boxe;
+
+CREATE TABLE cadastro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE professores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+    sobrenome VARCHAR(100) NOT NULL
+);
+
+INSERT INTO professores (nome, sobrenome) VALUES ('João', 'Silva');
+INSERT INTO professores (nome, sobrenome) VALUES ('Maria', 'Santos');
+INSERT INTO professores (nome, sobrenome) VALUES ('Carlos', 'Oliveira');
+
+CREATE TABLE agendamento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    professor_id INT NOT NULL,
+    data DATE NOT NULL,
+    hora TIME NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES cadastro(id),
+    FOREIGN KEY (professor_id) REFERENCES professores(id)
+);

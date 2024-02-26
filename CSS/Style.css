@@ -71,7 +71,55 @@
     height: auto;
     margin-left: 20px;
   }
-  
+
+  /* Estilos para a seção Cadstro */
+  .section_cadastro {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+
+  .div_cadastro {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .div_cadastro label {
+    color: #343a40; 
+  }
+
+  .input_form_cadastro {
+    margin-bottom: 20px;
+  }
+
+  .div_termos {
+    margin-bottom: 20px;
+  }
+
+  .div_botoes_form {
+    text-align: center;
+  }
+
+  .botao {
+    margin-right: 10px;
+  }
+
+  /* Estilos para os botões */
+  .botao {
+    background-color: #dc3545;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .botao:hover {
+    background-color: #c82333; /* Cor de fundo ao passar o mouse */
+  }  
   /* Estilos para a seção Modos de Treino */
   .training-section {
     background-color: #e9e9e9;
@@ -115,7 +163,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #343a40; /* Cor de fundo do footer */
+    background-color: #343a40;
   }
 
 /* Estilos para as seções personalizadas */
