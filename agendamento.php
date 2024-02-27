@@ -14,8 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($banco, $sql)) {
         echo "Agendamento realizado com sucesso!";
+        echo"<META http-equiv='refresh' content='3,URL=index.html'>";
     } else {
-        echo "Erro ao agendar: " . mysqli_error($banco);
+        echo "Erro ao agendar sua aula: " . mysqli_error($banco);
+        echo"<META http-equiv='refresh' content='3,URL=agendamento.html'>";
     }
 
     mysqli_close($banco);

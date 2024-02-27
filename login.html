@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
   <link rel="stylesheet" href="CSS/Style.css">
-  <title>Senac Boxe - Recuperar Senha</title>
+  <title>Senac Boxe - Login</title>
   <link rel="icon" href="Imagens/boxe_logo.png" type="Logo">
 </head>
 <body>
@@ -26,33 +26,29 @@
   <!-- Seção Login -->  
   <section class="section_login">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="div_login">
-            <div class="row">
-              <div class="col-md-10">
-                <form class="formulario_login" method="POST" action="loginVerificar.php">
-                  <label class="form-label espacamento_form" for="email_input">Email:</label>
-                  <input class="form-control input_form" id="email_input" type="email" name="email_input">
-                  <label class="form-label espacamento_form" for="senha_input">Senha:</label>
-                  <input class="form-control input_form" id="senha_input" type="password" name="senha_input">
-                  <a class="recuperar_login" href="recuperarSenha.html">Recuperar conta</a>
-                  <div class="div_botao_form">
-                    <input class="espacamento_form btn btn-primary botao" type="submit" value="Entrar" placeholder="Entrar">
-                    <a class="espacamento_form btn btn-success" href="cadastro.html">Novo Cadastro</a>
-                  </div>
-                </form>
-              </div>
-              <div class="col-md-2">
-                <img src="Imagens/boxe_logo.png" class="logo" alt="Logo">
-              </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="div_login">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <form class="formulario_login" method="POST" action="loginVerificar.php">
+                                <label class="form-label espacamento_form" for="email_input">Email:</label>
+                                <input class="form-control input_form" id="email_input" type="email" name="email_input">
+                                <label class="form-label espacamento_form" for="senha_input">Senha:</label>
+                                <input class="form-control input_form" id="senha_input" type="password" name="senha_input">
+                                <a class="recuperar_login" href="recuperarSenha.html">Recuperar conta</a>
+                                <div class="div_botao_form">
+                                    <input class="espacamento_form btn btn-primary botao" type="submit" value="Entrar" placeholder="Entrar">
+                                    <a class="espacamento_form btn btn-success botao" href="cadastro.html">Novo Cadastro</a>
+                                </div>                                
+                            </form>
+                        </div>                                           
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-
+</section>
 
 <!-- Seção do Footer -->
 <footer class="bg-dark text-white text-center py-3">

@@ -29,7 +29,7 @@
 
         mysqli_close($banco);
         
-            echo "<META http-equiv='refresh' content='0,URL=index.php'>";
+            echo "<META http-equiv='refresh' content='0,URL=index.html'>";
         
     } else {
         echo "Ocorreu algum erro";
@@ -37,7 +37,7 @@
         echo "j";
         echo $senha_input;
         echo "<br>";
-        //echo "<META http-equiv='refresh' content='0,URL=login.html'>";
+        echo "<META http-equiv='refresh' content='0,URL=login.html'>";
     }
 
 ?>
