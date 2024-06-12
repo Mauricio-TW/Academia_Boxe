@@ -144,8 +144,10 @@
     border-color: #bd2130;
   }
   .map-section {
-    width: 600px;
     margin: 0 auto;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 120px;    
     padding: 0;
     position: relative;
     overflow: hidden;
