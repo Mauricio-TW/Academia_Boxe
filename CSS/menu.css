@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+header {
+    background-color: #222;
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+    height: 200px; 
+    width: auto;
+}
+
+/*Menu*/
+#menu{
+	margin-bottom: 0;
+    width: 100%;
+	padding: 10px;
+    height: 70px;
+    background-color: #c82333;;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu ul{
+    list-style: none;
+    position: relative;
+}
+
+#menu ul li{
+    width: 120px;
+    float: left;
+	margin-top: -3px;
+}
+
+#menu a{
+    padding: 15px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #c82333;;
+    color: #fff;
+}
+
+#menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+
+#menu ul li:hover ul{
+    visibility: visible;
+}
+
+#menu a:hover {
+    background-color: #f4f4f4;
+    color: #222;
+    border-radius: 5px;
+}
+
+label[for="bt_menu"]{
+	padding: 5px;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	height: 50px;
+}
+
+#bt_menu{
+	display: none;
+}
+
+label[for="bt_menu"]{
+	display: none;
+}
+
+/*Distancia entre  o carrossel e menu*/
+#demo {
+    margin-top: -25px; 
+}
+
+/*Footer*/
+.footer-linha-container {
+	background-color: #222;
+	padding: 10px 0;
+  }
+  
+  footer {
+	text-align: center;
+  }
+  
+  #divfooter {
+	background-color: #c82333;
+	padding: 20px 0;
+	color: #222;
+  }
+  
+  #divfim {
+	background-color: #222;
+	padding: 10px 0;
+	color: #fff;
+  }
+  
+  .social-icon {
+	color: #222;
+	font-size: 24px;
+	margin: 0 10px;
+	text-decoration: none;
+  }
+  
+  .social-icon:hover {
+	color: white;
+  }
+  
+  #divfim p {
+	margin: 0;
+	color: #fff;
+  }
+
+@media (max-width: 800px){
+	label[for="bt_menu"]{
+		display: block;
+	}
+	#bt_menu:checked ~ #menu{
+		margin: 0;
+		height: auto;
+		margin-bottom: 20px;
+	}
+	#menu{
+		margin-left: -100%;
+		transition: all 1s;
+		height: 0;
+	}
+	#menu ul li{
+		width: 100%;
+		float: none;
+	}
+	#menu ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all 4s;
+	}
+	#menu ul li:hover ul{
+		height: auto;
+		max-height: 200px;
+	}
+	
+}
