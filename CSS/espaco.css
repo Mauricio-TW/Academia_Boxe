@@ -1,0 +1,18 @@
+
+
+/* Estilos para a seção do Mapa */
+.map-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.map-container {
+    border: 5px solid #222;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.map-container iframe {
+    border: none;
+}

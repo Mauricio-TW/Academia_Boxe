@@ -128,6 +128,7 @@ label[for="bt_menu"]{
 	color: #fff;
   }
 
+  /*Responsividade*/
 @media (max-width: 800px){
 	label[for="bt_menu"]{
 		display: block;
