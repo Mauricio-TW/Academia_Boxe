@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,31 +12,33 @@
   <title>Senac Boxe</title>
   <link rel="icon" href="../Imagens/boxe_logo.png" type="Logo">
 </head>
+
 <body>
 
   <!--Header-->
   <header>
-       <a href="index.html">
-        <img src="../Imagens/boxe_logo.png" alt="Logo" class="logo">
-      </a>
-</header>
-<!--Navbar-->
-<section id="nav">
-  <input type="checkbox" id="bt_menu"/>
-  <label for="bt_menu">&#9776</label>
-      <nav id="menu">
-          <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="espaço.html">Espaço</a></li>
-              <li><a href="professores.html">Professores</a></li>
-              <li><a href="treinos.html">Treinos</a></li>
-              <li><a href="valores.html">Valores</a></li>
-              <li><a href="cadastro.html">Cadastro</a></li>
-              <li><a href="compras.html">Loja</a></li>
-          </ul>
-      </nav>
+    <a href="index.html">
+      <img src="../Imagens/boxe_logo.png" alt="Logo" class="logo">
+    </a>
+  </header>
+
+  <!--Navbar-->
+  <section id="nav">
+    <input type="checkbox" id="bt_menu" />
+    <label for="bt_menu">&#9776</label>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="espaço.html">Espaço</a></li>
+        <li><a href="agendamento.html">Agendamento</a></li>
+        <li><a href="professores.html">Professores</a></li>
+        <li><a href="treinos.html">Treinos</a></li>
+        <li><a href="valores.html">Valores</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="compras.html">Loja</a></li>
+      </ul>
+    </nav>
   </section>
-  <hr>
 
   <!-- Carousel -->
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -81,55 +84,78 @@
   </div>
 
   <!-- Seção de Professores -->
-  <section class="container mt-5 professors-section bg-dark text-white">
-    <h2 class="text-center">Nossos Professores</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <img src="../Imagens/treinador_01.jpg" alt="Professor João" class="img-fluid rounded-circle">
-        <h4>Professor João Silva</h4>
-        <p>Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento físico e técnico.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="../Imagens/teinador_02.jpg" alt="Professora Maria" class="img-fluid rounded-circle">
-        <h4>Professora Maria Santos</h4>
-        <p>A Professora Maria Santos é uma campeã nacional de boxe e está pronta para compartilhar suas habilidades com você.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="../Imagens/treinador_03.jpg" alt="Professor Carlos" class="img-fluid rounded-circle">
-        <h4>Professor Carlos Oliveira</h4>
-        <p>Professor Carlos Oliveira é um mestre em técnicas de defesa e está comprometido em tornar você um lutador completo.</p>
+  <section class="container-fluid mt-5 professors-section bg-dark text-white">
+    <h2 class="text-center title-divider text-black">Nossos Professores</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 professor-card">
+          <div class="professor-info">
+            <img src="../Imagens/treinador_01.jpg" alt="Professor João" class="img-fluid rounded-circle">
+            <div class="text">
+              <h4>Professor João Silva</h4>
+              <p>Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento físico e técnico.</p>
+            </div><!--Fim da div text-->
+          </div><!--Fim da div prefossor-info-->
+        </div><!--Fim da div col-md-4 professor-card-->
+        <div class="col-md-4 professor-card">
+          <div class="professor-info">
+            <img src="../Imagens/teinador_02.jpg" alt="Professora Maria" class="img-fluid rounded-circle">
+            <div class="text">
+              <h4>Professora Maria Santos</h4>
+              <p>A Professora Maria Santos é uma campeã nacional de boxe e está pronta para compartilhar suas habilidades com você.</p>
+            </div><!--Fim da div text-->
+          </div><!--Fim da div prefossor-info-->
+        </div><!--Fim da div prefossor-info-->
+        <div class="col-md-4 professor-card">
+          <div class="professor-info">
+            <img src="../Imagens/treinador_03.jpg" alt="Professor Carlos" class="img-fluid rounded-circle">
+            <div class="text">
+              <h4>Professor Carlos Oliveira</h4>
+              <p>Professor Carlos Oliveira é um mestre em técnicas de defesa e está comprometido em tornar você um lutador completo.</p>
+            </div><!--Fim da div text-->
+          </div><!--Fim da div prefossor-info-->
+        </div><!--Fim da div col-md-4 professor-card-->
       </div>
     </div>
   </section>
 
   <!-- Seção de Modos de Treino -->
-  <section class="container mt-5 training-section bg-dark text-white">
-    <h2 class="text-center">Modos de Treino</h2>
+  <section class="container-fluid mt-5 training-section bg-red text-white">
+    <h2 class="text-center title-divider">Modos de Treino</h2>
     <div class="row">
       <div class="col-md-4">
-        <h4>Treinamento Iniciante</h4>
-        <p>Para iniciantes, oferecemos aulas que focam na técnica básica, condicionamento físico e fundamentos do boxe.</p>
-      </div>
+        <h3 class="text-black">Treinamento Iniciante</h3>
+        <p>Para iniciantes, oferecemos aulas que focam na técnica básica, condicionamento físico e fundamentos do boxe.
+        </p>
+      </div><!--Fim da div col-md-4-->
       <div class="col-md-4">
-        <h4>Treinamento Avançado</h4>
+        <h3 class="text-black">Treinamento Avançado</h3>
         <p>Para aqueles que desejam aprimorar suas habilidades, temos aulas avançadas com treinadores experientes.</p>
-      </div>
+      </div><!--Fim da div col-md-4-->
       <div class="col-md-4">
-        <h4>Treinamento de Competição</h4>
+        <h3 class="text-black">Treinamento Competição</h3>
         <p>Se você deseja competir, nossa academia oferece treinamento especializado para prepará-lo para o ringue.</p>
-      </div>
-    </div>
+      </div><!--Fim da div col-md-4-->
+    </div><!--Fim da div row-->
   </section>
 
   <!-- Seção de Valor da Academia -->
-  <section class="container mt-5 pricing-section bg-dark text-white pricing-section mb-4">
-    <h2 class="text-center">Valor da Academia</h2>
-    <p class="text-center">Nossos planos de adesão flexíveis permitem que você escolha a opção que melhor se adapte às suas necessidades. Entre em contato conosco para obter informações atualizadas sobre preços.</p>
+  <section class="container-fluid mt-3 pt-3 pb-5 pricing-section bg-red text-white">
+      <h2 class="text-center title-divider">Valor da Academia</h2>   
+          <h3 class="text-black">Planos a partir de 100$</h3>
+            <div class="col-md-6 offset-md-3 text-center">
+                <p>
+                  Descubra a excelência do boxe em nossa academia com preços acessíveis para todos os níveis de praticantes. Oferecemos um ambiente acolhedor e profissionais qualificados para ajudá-lo a alcançar seus objetivos.  resultados. 
+                </p>
+            </div>
   </section>
 
   <!-- Seção do Mapa -->
   <section class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7963101833193!2d-51.220083804631244!3d-30.042701007070256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1718232872653!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7963101833193!2d-51.220083804631244!3d-30.042701007070256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1718232872653!5m2!1spt-BR!2sbr"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <!-- Seção do Footer -->
@@ -148,8 +174,9 @@
       </a>
     </div><!-- Fim da div divfooter -->
     <div id="divfim">
-      <p>&copy; 2024 Overlord. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Senac Boxe. Todos os direitos reservados.</p>
     </div><!-- Fim da div divfim -->
   </footer>
-  </body>
+</body>
+
 </html>

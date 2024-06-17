@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+	background-color: whitesmoke;
+}
+
 /*Header*/
 header {
     background-color: #222;
@@ -24,6 +28,7 @@ header {
 	padding: 10px;
     height: 70px;
     background-color: #c82333;;
+	margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
