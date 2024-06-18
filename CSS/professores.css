@@ -1,0 +1,53 @@
+/*Seção Professores*/
+.professor-1,
+.professor-2,
+.professor-3 {  
+    width: 100%;
+    padding: 20px;
+}
+
+.professors-section {
+    background-color: #c82333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .professor-item {
+    padding: 20px 0;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .professor-item img {
+    border: 3px solid #fff;
+  }
+  
+  .professors-section h2 {
+    color: #222;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .professor-item h4 {
+    color: #222;
+    margin-bottom: 20px;
+  }
+
+/* Estilos para a seção do Mapa */
+.map-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.map-container {
+    border: 5px solid #222;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.map-container iframe {
+    border: none;
+}

@@ -7,7 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../CSS/Style.css">
+
+  <link rel="stylesheet" href="../CSS/professores.css">
   <link rel="stylesheet" href="../CSS/menu.css">
   <title>Senac Boxe</title>
   <link rel="icon" href="../Imagens/boxe_logo.png" type="Logo">
@@ -39,7 +40,7 @@
       </ul>
     </nav>
   </section>
-  
+
   <!-- Carousel -->
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -85,11 +86,11 @@
   </div>
 
   <!-- Seção dos Professores -->
-  <section class="container mt-5 professors-section custom-section">
+  <section class="container-fluid mt-5 professors-section custom-section">
     <h2 class="text-center mb-4">Nossos Professores</h2>
 
     <!-- Professor 1 -->
-    <div class="row professor-item">
+    <div class="row professor-item professor-1 full-width">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
         <img src="../Imagens/treinador_01.jpg" alt="Professor João" class="img-fluid rounded-circle mt-3 mb-3">
       </div>
@@ -107,7 +108,7 @@
     </div>
 
     <!-- Professor 2 -->
-    <div class="row professor-item">
+    <div class="row professor-item professor-2 full-width">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
         <img src="../Imagens/teinador_02.jpg" alt="Professora Maria" class="img-fluid rounded-circle mt-3 mb-3">
       </div>
@@ -126,7 +127,7 @@
     </div>
 
     <!-- Professor 3 -->
-    <div class="row professor-item">
+    <div class="row professor-item professor-3 full-width">
       <div class="col-md-4 d-flex justify-content-center align-items-center">
         <img src="../Imagens/treinador_03.jpg" alt="Professor Carlos" class="img-fluid rounded-circle mt-3 mb-3">
       </div>
@@ -144,12 +145,14 @@
   </section>
 
 
-  <!-- Seção do Mapa -->
+  <!--Seção do Mapa-->
   <section class="map-section">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.791615293098!2d-51.221467824940895!3d-30.042835674924344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1694568662725!5m2!1spt-BR!2sbr"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7963101833193!2d-51.220083804631244!3d-30.042701007070256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1718232872653!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </section>
 
   <!-- Seção do Footer -->

@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../CSS/Style.css">
+  <link rel="stylesheet" href="../CSS/agendamento.css">
   <link rel="stylesheet" href="../CSS/menu.css">
   <title>Senac Boxe</title>
   <link rel="icon" href="../Imagens/boxe_logo.png" type="Logo">
@@ -41,59 +41,64 @@
   </section>
 
   <!-- Seção Agendamento-->
-    <div class="container mt-5">
-      <h2 class="text-center">Agende Seu Treino Gratuito e Comece Sua Jornada de Melhoramento!</h2>
-      <div class="card">
-        <div class="card-header bg-danger text-white">
-          Agende Aqui o seu treino teste sem custo e comece sua jornada com a gente!
-        </div>
-        <div class="card-body">
-          <p>O treino pode ser marcado sem custos com o objetivo de experimentar. Aproveite tambem essa oportunidade
-            para conhecer nossas instalações e profissionais!</p>
-          <form id="formulario-agendamento" action="agendamento.php" method="POST">
-            <div class="mb-3">
-              <label for="data" class="form-label">Data do Treino:</label>
-              <input type="date" id="data" name="data" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label for="professor" class="form-label">Professor:</label>
-              <select id="professor" name="professor" class="form-select" required>
-                <option value="" disabled selected>Selecione o Professor</option>
-                <option value="joao">Professor João</option>
-                <option value="maria">Professora Maria</option>
-                <option value="carlos">Professor Carlos</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-danger">Agendar Treino</button>
-          </form>
-        </div><!--Fim da div card-body-->
-      </div><!--Fim da div Card-->
-    </div><!--Fim da div container mt-5-->
+  <div class="container mt-5">
+    <h2 class="text-center">Agende Seu Treino Gratuito e Comece Sua Jornada de Melhoramento!</h2>
+    <div class="card">
+      <div class="card-header bg-danger text-white">
+        Agende Aqui o seu treino teste sem custo e comece sua jornada com a gente!
+      </div>
+      <div class="card-body">
+        <p>O treino pode ser marcado sem custos com o objetivo de experimentar. Aproveite tambem essa oportunidade
+          para conhecer nossas instalações e profissionais!</p>
+        <form id="formulario-agendamento" action="agendamento.php" method="POST">
+          <div class="mb-3">
+            <label for="data" class="form-label">Data do Treino:</label>
+            <input type="date" id="data" name="data" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="professor" class="form-label">Professor:</label>
+            <select id="professor" name="professor" class="form-select" required>
+              <option value="" disabled selected>Selecione o Professor</option>
+              <option value="joao">Professor João</option>
+              <option value="maria">Professora Maria</option>
+              <option value="carlos">Professor Carlos</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-danger">Agendar Treino</button>
+        </form>
+      </div><!--Fim da div card-body-->
+    </div><!--Fim da div Card-->
+  </div><!--Fim da div container mt-5-->
 
-      <!-- Seção do Mapa -->
+  <!--Seção do Mapa-->
   <section class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7963101833193!2d-51.220083804631244!3d-30.042701007070256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1718232872653!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7963101833193!2d-51.220083804631244!3d-30.042701007070256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1718232872653!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </section>
 
-    <!-- Seção do Footer -->
-    <div class="footer-linha-container"></div>
+  <!-- Seção do Footer -->
+  <div class="footer-linha-container"></div>
 
-    <footer>
-      <div id="divfooter">
-        <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://instagram.com/" target="_blank" class="social-icon">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/" target="_blank" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div><!-- Fim da div divfooter -->
-      <div id="divfim">
-        <p>&copy; 2024 Senac Boxe. Todos os direitos reservados.</p>
-      </div><!-- Fim da div divfim -->
-    </footer>
+  <footer>
+    <div id="divfooter">
+      <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com/" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="social-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div><!-- Fim da div divfooter -->
+    <div id="divfim">
+      <p>&copy; 2024 Senac Boxe. Todos os direitos reservados.</p>
+    </div><!-- Fim da div divfim -->
+  </footer>
 </body>
 
 </html>

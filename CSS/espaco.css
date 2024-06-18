@@ -1,4 +1,60 @@
+/*Seçao Espaço*/
+.espaco-section {
+    background-color: #c82333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top:48px ;
+    border-bottom: 1px solid #fff; /* Mantendo a borda branca */
+    margin-bottom: 20px; /* Adicionando espaço abaixo da linha */
+    padding-bottom: 0; /* Removendo o padding bottom */
+}
 
+.espaco-section h2, h3 {
+    color: #000;
+}
+
+.espaco-section h3 {
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.espaco-section .espaco-texto {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.espaco-section .espaco-texto-item {
+    margin-bottom: 20px;
+}
+
+/*Estilo da Linha*/
+.linha-branca {
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: calc(100% + 60px);
+    left: 0;
+}
+
+/*Estilo para o Grid de Imagens*/
+.space-images .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.space-images .col-md-3 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.space-images img {
+    display: block;
+}
 
 /* Estilos para a seção do Mapa */
 .map-section {
@@ -16,3 +72,4 @@
 .map-container iframe {
     border: none;
 }
+
