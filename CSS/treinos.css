@@ -1,60 +1,112 @@
 /*Seção dos Treinos*/
 body {
-    margin: 0;
-  }
-  
-  .training-section {
-    background-color: #c82333;
-    color: #fff;
-    width: 100%;
-    padding: 20px 0;
-    margin-top: 48px;
-  }
-  
-   .training-section .card {
-    background-color: transparent;
-    border: none; 
-  }
-  
-    .training-section .card-body {
-    color: #fff; 
-  }
-  
-   .training-section h3, .training-section p {
-    color: #fff;
-  }
-   
-  .white-line {
-    border: none;
-    border-top: 2px solid #fff;
-    margin: 10px 0;
-    width: 100%;
-  }
-  
-  .row.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  
-  .row.no-gutters > [class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
-  }
+  margin: 0;
+}
+
+.training-section {
+  background-color: #c82333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 48px;
+}
+
+.training-section .card {
+  background-color: transparent;
+  border: none;
+}
+
+.training-section .card-body {
+  color: #fff;
+}
+
+.training-section h3,
+.training-section p {
+  color: #fff;
+}
+
+.white-line {
+  border: none;
+  border-top: 2px solid #fff;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters>[class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.card-body {
+  text-align: justify;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.card-body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid #fff;
+}
+
+.card-body h4 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
 
 /* Estilos para a seção do Mapa */
 .map-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .map-container {
-    border: 5px solid #222;
-    border-radius: 10px;
-    display: inline-block;
+  border: 5px solid #222;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .map-container iframe {
-    border: none;
+  border: none;
 }
 
+/*Responsividade*/
+@media (max-width: 800px) {
+  .espaco-section .title-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .professors-section h2,
+  .professor-item h4 {
+    text-align: center;
+  }
+
+  .training-section .card-body {
+    text-align: center;
+  }
+
+  .training-section .card-body::after {
+    display: none;
+  }
+
+  .card-body h4 {
+    text-align: center;
+  }
+
+  .map-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,45 +1,39 @@
-/*Seçao Espaço*/
+/*Seção Espaço*/
 .espaco-section {
     background-color: #c82333;
-    color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    margin-top:48px ;
-    border-bottom: 1px solid #fff; /* Mantendo a borda branca */
-    margin-bottom: 20px; /* Adicionando espaço abaixo da linha */
-    padding-bottom: 0; /* Removendo o padding bottom */
-}
-
-.espaco-section h2, h3 {
-    color: #000;
-}
-
-.espaco-section h3 {
-    color: #000;
-    margin-bottom: 20px;
+    color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 48px;
+    position: relative;
+  }
+  
+  .espaco-section h2 {
     text-align: center;
-}
-
-.espaco-section .espaco-texto {
+    color: #222;
+  }
+  
+  .espaco-section h3 {
+    text-align: center;
+    color: #222;
     margin-top: 20px;
+  }
+  
+  .espaco-section p {
+    margin-top: 30px;
     text-align: justify;
-}
+    color: #ffffff;
+    line-height: 1.6;
+  }
 
-.espaco-section .espaco-texto-item {
-    margin-bottom: 20px;
-}
-
-/*Estilo da Linha*/
-.linha-branca {
-    background-color: #fff;
-    height: 2px;
-    width: 100%;
-    display: block;
+  /*Linha*/  
+  .espaco-section .title-line {
     position: absolute;
-    top: calc(100% + 60px);
     left: 0;
-}
+    transform: translateY(-0%); 
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+  }
 
 /*Estilo para o Grid de Imagens*/
 .space-images .row {
@@ -54,6 +48,11 @@
 
 .space-images img {
     display: block;
+}
+
+/*Carrossel por alguma razão*/
+.carousel-caption h3 {
+    color: white !important;
 }
 
 /* Estilos para a seção do Mapa */
@@ -71,5 +70,36 @@
 
 .map-container iframe {
     border: none;
+}
+
+/*Responsividade*/
+@media (max-width: 800px) {
+    .espaco-section {
+        padding: 30px 10px;
+        margin-top: 24px;
+    }
+
+    .espaco-section h2,
+    .espaco-section h3 {
+        font-size: 24px;
+    }
+
+    .espaco-section p {
+        font-size: 14px;
+    }
+
+    .espaco-section .title-line {
+        display: none;
+    }
+
+    .space-images .col-md-3 {
+        width: 50%;
+        padding: 0 5px;
+    }
+
+    .map-container {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 

@@ -51,3 +51,29 @@
 .map-container iframe {
     border: none;
 }
+
+/*Responsividade*/
+@media (max-width: 800px) {
+  .professors-section {
+      padding: 10px 0;
+  }
+
+  .professor-item {
+      padding: 10px 0;
+  }
+
+  .professors-section h2 {
+      font-size: 24px;
+      padding-bottom: 5px;
+  }
+
+  .professor-item h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+  }
+
+  .professor-item img {
+      max-width: 100%;
+      height: auto;
+  }
+}
