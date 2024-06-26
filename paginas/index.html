@@ -82,42 +82,28 @@
   </div>
 
   <!-- Seção de Professores -->
-  <section class="container-fluid mt-5 professors-section bg-dark text-white">
-    <h2 class="text-center title-divider text-black">Nossos Professores</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 professor-card">
-          <div class="professor-info">
-            <img src="../Imagens/treinador_01.jpg" alt="Professor João" class="img-fluid rounded-circle">
-            <div class="text">
-              <h4>Professor João Silva</h4>
-              <p>Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento
-                físico e técnico.</p>
-            </div><!--Fim da div text-->
-          </div><!--Fim da div prefossor-info-->
-        </div><!--Fim da div col-md-4 professor-card-->
-        <div class="col-md-4 professor-card">
-          <div class="professor-info">
-            <img src="../Imagens/teinador_02.jpg" alt="Professora Maria" class="img-fluid rounded-circle">
-            <div class="text">
-              <h4>Professora Maria Santos</h4>
-              <p>A Professora Maria Santos é uma campeã nacional de boxe e está pronta para compartilhar suas
-                habilidades com você.</p>
-            </div><!--Fim da div text-->
-          </div><!--Fim da div prefossor-info-->
-        </div><!--Fim da div prefossor-info-->
-        <div class="col-md-4 professor-card">
-          <div class="professor-info">
-            <img src="../Imagens/treinador_03.jpg" alt="Professor Carlos" class="img-fluid rounded-circle">
-            <div class="text">
-              <h4>Professor Carlos Oliveira</h4>
-              <p>Professor Carlos Oliveira é um mestre em técnicas de defesa e está comprometido em tornar você um
-                lutador completo.</p>
-            </div><!--Fim da div text-->
-          </div><!--Fim da div prefossor-info-->
-        </div><!--Fim da div col-md-4 professor-card-->
-      </div><!--Fim da div row-->
-    </div><!--Fim da div container-->
+  <section id="professores">
+    <div class="prof">
+      <h2>Nossos Professores</h2>
+      <div class="prof1">
+        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor João" class="img-fluid rounded-circle">
+        <h4>Professor João Silva</h4>
+        <p>Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento
+          físico e técnico.</p>
+      </div><!--Fim da div prof1-->
+      <div class="prof2">
+        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professora Maria" class="img-fluid rounded-circle">
+        <h4>Professora Maria Santos</h4>
+        <p>A Professora Maria Santos é uma campeã nacional de boxe e está pronta para compartilhar suas
+          habilidades com você.</p>
+      </div><!--Fim da div prof2-->
+      <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor Carlos" class="img-fluid rounded-circle">
+      <div class="prof3">
+        <h4>Professor Carlos Oliveira</h4>
+        <p>Professor Carlos Oliveira é um mestre em técnicas de defesa e está comprometido em tornar você um
+          lutador completo.</p>
+      </div><!--Fim da div prof3-->
+    </div><!--fim da div professores-->
   </section>
 
   <!-- Seção de Modos de Treino -->
@@ -126,7 +112,8 @@
     <div class="row">
       <div class="col-md-4">
         <h3 class="text-black">Treinamento Iniciante</h3>
-        <p>Para iniciantes, oferecemos aulas que focam na técnica básica, condicionamento físico e fundamentos do boxe.</p>
+        <p>Para iniciantes, oferecemos aulas que focam na técnica básica, condicionamento físico e fundamentos do boxe.
+        </p>
       </div><!--Fim da div col-md-4-->
       <div class="col-md-4">
         <h3 class="text-black">Treinamento Avançado</h3>
@@ -154,6 +141,14 @@
 
   <!-- Seção do Mapa -->
   <section class="map-section">
+    <div class="info">
+      <h3>Informações de Contato</h3>
+      <p>Endereço: Rua Exemplo, 123, Centro, Cidade, Estado, CEP 12345-678</p>
+      <p>Telefone: (11) 1234-5678</p>
+      <p>Email: contato@senacboxe.com.br</p>
+      <p>Serviços: Aulas de boxe para iniciantes, treinamento avançado, treinamento para competições,
+        aulas particulares, condicionamento físico.</p>
+    </div>
     <div class="map-container">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7963101833193!2d-51.220083804631244!3d-30.042701007070256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1718232872653!5m2!1spt-BR!2sbr"
@@ -164,8 +159,20 @@
 
   <!-- Seção do Footer -->
   <div class="footer-linha-container"></div>
-  
+
   <footer>
+    <div class="footer-links">
+      <ul class="linkesq">
+        <li><a href="#">Fale Conosco</a></li>
+        <li><a href="#">Proteção e Privacidade de Dados - LGPD</a></li>
+        <li><a href="#">Trabalhe Conosco</a></li>
+      </ul>
+      <ul class="linkdir">
+        <li><a href="#">Sala de Imprensa</a></li>
+        <li><a href="#">Codigo de Ética</a></li>
+        <li><a href="#">Denúncia</a></li>
+      </ul>
+    </div><!-- Fim da div footer-links -->
     <div id="divfooter">
       <a href="https://www.facebook.com/" target="_blank" class="social-icon">
         <i class="fab fa-facebook-f"></i>
