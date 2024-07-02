@@ -6,7 +6,6 @@
 
 #professores {
     padding: 40px 0;
-    background-color: #f8f9fa;
     text-align: center;
 }
 
@@ -27,7 +26,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    background-color: #dc3545;
+    background-color: #c82333;
     color: #fff;
 }
 
@@ -59,8 +58,59 @@
     color: #fff;
 }
 
+/*Seção dos Treinos*/
+.secTrein {
+    padding: 20px;
+  }
+  
+  .treinosAll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .treino {    
+    flex: 0 1 calc(33.33% - 10px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .treinoTitulo {
+    color: #c82333;
+    margin-bottom: 10px;
+  }
+  
+  .treinoInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .treinoInfo div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .treinoInfo i {
+    margin-right: 10px;
+    color: #000;
+  }
+  
+  .treinoInfo p {
+    margin: 0;
+  }
+  
+  .treino .intensidade {
+    color: #c82333;
+    font-weight: bold;
+  }
 
-/* Estilos para a seção do Mapa */
+/*Seção do Mapa */
 .map-section {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -93,26 +143,61 @@
     height: 450px;
 }
 
-/*Responsividade*/
+/* Responsividade para Professores */
 @media (max-width: 800px) {
-    .professors-section {
-        padding: 10px 20px 20px;
+    .cardsProf {
+        justify-content: center;
     }
 
-    .professor-info img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 800px) {
-    .treino-section .col-md-4 {
+    .card {
+        width: calc(50% - 15px);
         margin-bottom: 20px;
     }
 }
 
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Responsividade para Treinos */
 @media (max-width: 800px) {
-    .preco-section {
-        padding: 10px 20px 20px;
+    .treinosAll {
+        justify-content: center;
+    }
+
+    .treino {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .treino {
+        flex: 0 1 100%;
+    }
+}
+
+/* Responsividade para Mapa */
+@media (max-width: 800px) {
+    .map-section {
+        flex-direction: column-reverse;
+    }
+
+    .info {
+        margin: 0;
+        padding: 20px 10px;
+    }
+
+    .map-container {
+        margin: 0;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .map-container {
+        height: 300px;
     }
 }
