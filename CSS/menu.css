@@ -1,73 +1,74 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-body{
+body {
 	background-color: whitesmoke;
 }
 
 /*Header*/
 header {
-    background-color: #222;
-    padding: 10px;
-    overflow: hidden;
-    text-align: center;
+	background-color: #222;
+	padding: 10px;
+	overflow: hidden;
+	text-align: center;
 }
 
 .logo {
-    display: inline-block;
-    height: 200px; 
-    width: auto;
+	display: inline-block;
+	height: 200px;
+	width: auto;
 }
 
 /*Menu*/
-#menu{
+#menu {
 	margin-bottom: 0;
-    width: 100%;
+	width: 100%;
 	padding: 10px;
-    height: 70px;
-    background-color: #c82333;
+	height: 70px;
+	background-color: #c82333;
 	margin-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-#menu ul{
-    list-style: none;
-    position: relative;
+#menu ul {
+	list-style: none;
+	position: relative;
 }
 
-#menu ul li{
-    width: 120px;
-    float: left;
+#menu ul li {
+	width: 120px;
+	float: left;
 	margin-top: -3px;
 }
 
-#menu a{
-    padding: 15px;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background-color: #c82333;;
-    color: #fff;
+#menu a {
+	padding: 15px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	background-color: #c82333;
+	;
+	color: #fff;
 }
 
-#menu ul ul{
-    position: absolute;
-    visibility: hidden;
+#menu ul ul {
+	position: absolute;
+	visibility: hidden;
 }
 
-#menu ul li:hover ul{
-    visibility: visible;
+#menu ul li:hover ul {
+	visibility: visible;
 }
 
 #menu a:hover {
-    background-color: #f4f4f4;
-    color: #222;
-    border-radius: 5px;
+	background-color: #f4f4f4;
+	color: #222;
+	border-radius: 5px;
 }
 
-label[for="bt_menu"]{
+label[for="bt_menu"] {
 	padding: 5px;
 	background-color: #222;
 	color: #fff;
@@ -77,119 +78,124 @@ label[for="bt_menu"]{
 	height: 50px;
 }
 
-#bt_menu{
+#bt_menu {
 	display: none;
 }
 
-label[for="bt_menu"]{
+label[for="bt_menu"] {
 	display: none;
 }
 
-/*Distancia entre  o carrossel e menu*/
+/*Distância entre  o carrossel e o menu*/
 #demo {
-    margin-top: -25px; 
+	margin-top: -25px;
 }
 
 /*Footer*/
 .footer-linha-container {
 	background-color: #222;
 	padding: 10px 0;
-  }
+}
 
-  .footer-links {
+.footer-links {
 	display: flex;
 	justify-content: space-between;
 	background-color: #222;
-	color:#fff;
+	color: #fff;
 	padding: 20px 25%;
-  }
+}
 
-  .linkdir{
+.linkdir {
 	margin-right: 70px;
-  }
-  
-  .footer-links ul {
+}
+
+.footer-links ul {
 	list-style: none;
-  }
-  
-  .footer-links li {
+}
+
+.footer-links li {
 	margin-bottom: 10px;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
 	text-decoration: none;
-	color:#fff;
-  }
-  
-  .footer-links a:hover {
+	color: #fff;
+}
+
+.footer-links a:hover {
 	color: #c82333;
-  }
-  
-  .footer-linha-container {
+}
+
+.footer-linha-container {
 	background-color: #c82333;
 	padding: 10px 0;
-  }
-  
-  footer {
+}
+
+footer {
 	text-align: center;
-  }
-  
-  #divfooter {
+}
+
+#divfooter {
 	background-color: #c82333;
 	padding: 20px 0;
 	color: #222;
-  }
-  
-  #divfim {
+}
+
+#divfim {
 	background-color: #222;
 	padding: 10px 0;
 	color: #fff;
-  }
-  
-  .social-icon {
+}
+
+.social-icon {
 	color: #222;
 	font-size: 24px;
 	margin: 0 10px;
 	text-decoration: none;
-  }
-  
-  .social-icon:hover {
+}
+
+.social-icon:hover {
 	color: white;
-  }
-  
-  #divfim p {
+}
+
+#divfim p {
 	margin: 0;
 	color: #fff;
-  }
+}
 
-  /*Responsividade*/
-@media (max-width: 800px){
-	label[for="bt_menu"]{
+/*Responsividade*/
+@media (max-width: 800px) {
+	label[for="bt_menu"] {
 		display: block;
 	}
-	#bt_menu:checked ~ #menu{
+
+	#bt_menu:checked~#menu {
 		margin: 0;
 		height: auto;
 		margin-bottom: 20px;
 	}
-	#menu{
+
+	#menu {
 		margin-left: -100%;
 		transition: all 1s;
 		height: 0;
 	}
-	#menu ul li{
+
+	#menu ul li {
 		width: 100%;
 		float: none;
 	}
-	#menu ul ul{
+
+	#menu ul ul {
 		position: static;
 		overflow: hidden;
 		max-height: 0;
 		transition: all 4s;
 	}
-	#menu ul li:hover ul{
+
+	#menu ul li:hover ul {
 		height: auto;
 		max-height: 200px;
 	}
-	
+
 }
