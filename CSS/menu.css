@@ -99,6 +99,11 @@ label[for="bt_menu"] {
 
 
 /*Seção do Mapa */
+#tituloP{
+    margin-top: 40px;
+    text-align: center;
+}
+
 .map-section {
     margin-top: 20px;
     margin-bottom: 20px;

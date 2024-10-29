@@ -9,10 +9,6 @@
     text-align: center;
 }
 
-#tituloP {
-    margin-bottom: 40px;
-}
-
 .cardsProf {
     display: flex; /* Define um layout flexível */
     flex-wrap: wrap; /* Permite que os itens flexíveis quebrem em várias linhas */
