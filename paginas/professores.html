@@ -17,26 +17,26 @@
 <body>
 
   <!--Header-->
-  <header>
-    <a href="index.html">
-      <img src="../Imagens/boxe_logo.png" alt="Logo" class="logo">
-    </a>
+  <header>   
+
+    <!--Navbar-->
+    <div id="nav">
+      <input type="checkbox" id="bt_menu" />
+      <label for="bt_menu">&#9776</label>
+      <nav id="menu">    
+        <img src="../Imagens/boxe_logo.png" alt="Logo" class="logo">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+          <li><a href="professores.html">Professores</a></li>
+          <li><a href="espaco.html">Espaço</a></li>
+          <li><a href="compras.html">Loja</a></li>
+        </ul>
+        <a href="login.html" class="login-icon"><i class="fas fa-user"></i></a>
+      </nav>
+    </div>
   </header>
 
-  <!--Navbar-->
-  <section id="nav">
-    <input type="checkbox" id="bt_menu" />
-    <label for="bt_menu">&#9776</label>
-    <nav id="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="agendamento.html">Agendamento</a></li>
-        <li><a href="professores.html">Professores</a></li>
-        <li><a href="treinos.html">Treinos</a></li>
-        <li><a href="compras.html">Loja</a></li>
-      </ul>
-    </nav>
-  </section>
 
   <!-- Carousel -->
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -88,7 +88,8 @@
       <h2>Nossos Professores</h2>
       <!-- Professor 1 -->
       <div class="profes1">
-        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor João" class="img-fluid rounded-circle mt-3 mb-3">
+        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor João"
+          class="img-fluid rounded-circle mt-3 mb-3">
         <h4>Professor João Silva</h4>
         <p>
           Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento físico e
@@ -101,7 +102,8 @@
       </div><!--fim da div profes1-->
       <!-- Professor 2 -->
       <div class="profes2">
-        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professora Maria" class="img-fluid rounded-circle mt-3 mb-3">
+        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professora Maria"
+          class="img-fluid rounded-circle mt-3 mb-3">
         <h4>Professora Maria Santos</h4>
         <p>
           A Professora Maria Santos é uma das maiores campeãs nacionais de boxe da história. Ela conquistou inúmeros
@@ -115,7 +117,8 @@
       </div><!--fim da dvi profes2-->
       <!-- Professor 3 -->
       <div class="profes3">
-        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor Carlos" class="img-fluid rounded-circle mt-3 mb-3">
+        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor Carlos"
+          class="img-fluid rounded-circle mt-3 mb-3">
         <h4>Professor Carlos Oliveira</h4>
         <p>
           Professor Carlos Oliveira é conhecido por sua especialização em técnicas de defesa e estratégias de
@@ -178,15 +181,11 @@
       </nav>
     </div><!-- Fim da div footer-links -->
     <nav id="divfooter">
-      <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/" target="_blank" class="social-icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://twitter.com/" target="_blank" class="social-icon">
-        <i class="fab fa-twitter"></i>
-      </a>
+      <a href="https://www.facebook.com/" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
     </nav><!-- Fim da div divfooter -->
     <div id="divfim">
       <p>&copy; 2024 Senac Boxe. Todos os direitos reservados.</p>
