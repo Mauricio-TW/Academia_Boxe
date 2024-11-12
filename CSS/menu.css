@@ -9,6 +9,15 @@ body {
 }
 
 /* Menu */
+#nav{
+    margin: 0% auto;
+width: 90%;
+}
+
+header{
+    background-color: #333;
+}
+
 #menu {
     display: flex;
     align-items: center;
@@ -22,7 +31,7 @@ body {
 
 /* Logo no canto esquerdo */
 #menu .logo {
-    height: 120px;
+    height: 100px;
     width: auto;
 }
 
@@ -44,19 +53,21 @@ body {
     margin-left: auto; 
 }
 
-#menu a {
+#menu a:visited,
+#menu a:link{
 	padding: 15px 5px;
+    padding-bottom: 3px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
     background-color: #333;
     color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
 }
 
 #menu a:hover {
-    text-decoration: none;
     border-bottom: 2px solid #fff;
-    padding-bottom: 0;
 }
 
 .login-icon {
@@ -64,7 +75,6 @@ body {
     font-size: 24px;
     text-decoration: none;
     padding: 6px 10px;
-    margin-right: 50px;
 }
 
 label[for="bt_menu"]{
