@@ -22,7 +22,7 @@ body {
 
 /* Logo no canto esquerdo */
 #menu .logo {
-    height: 150px;
+    height: 120px;
     width: auto;
     transition: none; /* Remove a transição de hover do logo */
 }
