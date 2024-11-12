@@ -5,7 +5,7 @@
 }
 
 #professores {
-    padding: 40px 0; /* Adiciona um padding superior e inferior de 40px e um padding de 0 na esquerda e direita */
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -22,7 +22,7 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao redor do card */
     transition: transform 0.3s ease; /* Adiciona uma transição suave para transformações */
-    background-color: #c82333;
+    background-color: #333;
     color: #fff;
 }
 
@@ -77,8 +77,9 @@
 }
 
 .treinoTitulo {
-    color: #c82333;
+    color: #FFC107;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .treinoInfo {
@@ -101,9 +102,16 @@
     margin: 0;
 }
 
-.treino .intensidade {
-    color: #c82333;
-    font-weight: bold;
+.treino .baixa-intensidade {
+    color: #FF3B30;
+}
+
+.treino .media-intensidade {
+    color: #FFCC00;
+}
+
+.treino .alta-intensidade {
+    color: #34C759;
 }
 
 /* Responsividade para Professores */

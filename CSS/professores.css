@@ -1,79 +1,54 @@
-/*Seção Professores*/
-.professor-1,
-.professor-2,
-.professor-3 {  
-    width: 100%;
-    padding: 20px;
+#professores {
+  text-align: center;
+  padding: 20px;
 }
 
-.professors-section {
-    background-color: #c82333;
-    color: #fff;
-    padding: 20px 0;
-  }
-  
-  .professor-item {
-    padding: 20px 0;
-    border-bottom: 2px solid #fff;
-  }
-  
-  .professor-item img {
-    border: 3px solid #fff;
-  }
-  
-  .professors-section h2 {
-    color: #222;
-    padding-bottom: 10px;
-    text-align: center;
-    border-bottom: 2px solid #fff;
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .professor-item h4 {
-    color: #222;
-    margin-bottom: 20px;
-  }
-
-/* Estilos para a seção do Mapa */
-.map-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+.tituloP {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.map-container {
-    border: 5px solid #222;
-    border-radius: 10px;
-    display: inline-block;
+.professor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
-.map-container iframe {
-    border: none;
+.professor:nth-child(even) .professor-img {
+  order: 2;
 }
 
-/*Responsividade*/
-@media (max-width: 800px) {
-  .professors-section {
-      padding: 10px 0;
-  }
+.professor-img {
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
 
-  .professor-item {
-      padding: 10px 0;
-  }
+.descricao {
+  max-width: 60%;
+  text-align: center;
+}
 
-  .professors-section h2 {
-      font-size: 24px;
-      padding-bottom: 5px;
-  }
+.descricao h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-align: center;
+}
 
-  .professor-item h4 {
-      font-size: 18px;
-      margin-bottom: 10px;
-  }
+.descricao p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
 
-  .professor-item img {
-      max-width: 100%;
-      height: auto;
-  }
+#professores .professor-instagram {
+  color: #333;
+}
+
+#professores .professor-instagram:hover {
+  color: #E4405F;
 }

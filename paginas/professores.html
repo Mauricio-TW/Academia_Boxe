@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
   <link rel="stylesheet" href="../CSS/professores.css">
   <link rel="stylesheet" href="../CSS/menu.css">
   <meta name="author" content="Mauricio T Welter">
@@ -18,13 +17,13 @@
 <body>
 
   <!--Header-->
-  <header>   
+  <header>
 
     <!--Navbar-->
     <div id="nav">
       <input type="checkbox" id="bt_menu" />
       <label for="bt_menu">&#9776</label>
-      <nav id="menu">    
+      <nav id="menu">
         <img src="../Imagens/boxeLogo.png" alt="Logo" class="logo">
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -83,54 +82,82 @@
     </button>
   </div>
 
-  <!-- Seção dos Professores -->
-  <section id="professoresTre">
-    <div class="profTreino">
-      <h2>Nossos Professores</h2>
-      <!-- Professor 1 -->
-      <div class="profes1">
-        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor João"
-          class="img-fluid rounded-circle mt-3 mb-3">
-        <h4>Professor João Silva</h4>
-        <p>
-          Com mais de 10 anos de experiência no boxe, o Professor João Silva é um especialista em treinamento físico e
-          técnico.
-          Ele já treinou campeões nacionais e internacionais, e está comprometido em ajudar você a atingir seus
-          objetivos no boxe,
-          seja você um iniciante em busca de condicionamento físico ou um atleta profissional em busca do próximo
-          título.
-        </p>
-      </div><!--fim da div profes1-->
-      <!-- Professor 2 -->
-      <div class="profes2">
-        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professora Maria"
-          class="img-fluid rounded-circle mt-3 mb-3">
-        <h4>Professora Maria Santos</h4>
-        <p>
-          A Professora Maria Santos é uma das maiores campeãs nacionais de boxe da história. Ela conquistou inúmeros
-          títulos,
-          incluindo medalhas de ouro em competições internacionais. Maria é conhecida por sua abordagem de treinamento
-          intensivo,
-          que visa aprimorar suas habilidades técnicas e físicas. Ela é a escolha ideal para quem busca treinamento de
-          alto nível
-          e aspira a competir no boxe de elite.
-        </p>
-      </div><!--fim da dvi profes2-->
-      <!-- Professor 3 -->
-      <div class="profes3">
-        <img src="../Imagens/perfil.jpg" height="300px" width="300px" alt="Professor Carlos"
-          class="img-fluid rounded-circle mt-3 mb-3">
-        <h4>Professor Carlos Oliveira</h4>
-        <p>
-          Professor Carlos Oliveira é conhecido por sua especialização em técnicas de defesa e estratégias de
-          combate.
-          Ele já treinou diversos lutadores que se destacaram em competições de MMA e boxe. Se você deseja aprender
-          a
-          arte da defesa
-          e se tornar um lutador completo, o Professor Carlos é a escolha certa. Ele irá te guiar passo a passo em
-          direção ao sucesso.
-        </p>
-      </div><!--fim da div profes3-->
+  <!--Seção Professores-->
+  <section id="professores">
+    <div class="container">
+      <h2 class="tituloP">Nossos Professores</h2>
+
+      <!-- Professor João -->
+      <div class="professor">
+        <img src="../Imagens/treinador 1.jpg" alt="Professor João Silva" class="professor-img">
+        <div class="descricao">
+          <h3>Professor João Silva</h3>
+          <p>Com mais de uma década de dedicação ao boxe, o Professor João Silva é um treinador experiente que alia
+            técnicas refinadas a uma abordagem motivadora. Ele é conhecido por incentivar seus alunos a superar limites
+            e desenvolver não apenas habilidades físicas, mas também confiança e resiliência. Seus treinamentos são
+            cuidadosamente planejados para preparar os alunos para desafios dentro e fora do ringue, promovendo
+            disciplina e autoconfiança.</p>
+          <p>Para conhecer melhor o Professor, é só seguir
+            <a href="https://www.instagram.com/" class="social-icon professor-instagram"><i class="fab fa-instagram"></i></a>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Professora Maria -->
+      <div class="professor">
+        <img src="../Imagens/treinadora 1.jpg" alt="Professora Maria Santos" class="professor-img">
+        <div class="descricao">
+          <h3>Professora Maria Santos</h3>
+          <p>Campeã nacional de boxe, a Professora Maria Santos é uma verdadeira inspiração para seus alunos. Sua
+            carreira de sucesso é marcada pela determinação e pela superação de obstáculos, atributos que ela leva ao
+            ringue e transmite em suas aulas. Com uma didática clara e envolvente, ela não apenas compartilha técnicas
+            avançadas, mas também busca instigar em seus alunos o mesmo espírito de luta e coragem que a guiou ao longo
+            de sua jornada.</p>
+          <p>Para conhecer melhor a Professora, é só seguir
+            <a href="https://www.instagram.com/" class="social-icon professor-instagram"><i
+                class="fab fa-instagram"></i></a>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Professor Carlos -->
+      <div class="professor">
+        <img src="../Imagens/treinador 2.jpg" alt="Professor Carlos Oliveira" class="professor-img">
+        <div class="descricao">
+          <h3>Professor Carlos Oliveira</h3>
+          <p>Especialista em técnicas de defesa e estratégias de combate, o Professor Jorge Schmidt dedica-se a formar
+            lutadores completos, tanto em habilidades físicas quanto mentais. Ele acredita que o boxe vai além de socos
+            e golpes — envolve estratégia, controle e inteligência. Em suas aulas, Jorge enfatiza a importância do
+            preparo mental e da disciplina, proporcionando aos alunos uma compreensão profunda e profissional do
+            esporte.</p>
+          <p>Para conhecer melhor o Professor, é só seguir
+            <a href="https://www.instagram.com/" class="social-icon professor-instagram"><i
+                class="fab fa-instagram"></i></a>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Professora Alessandra -->
+      <div class="professor">
+        <img src="../Imagens/treinadora 2.jpg" alt="Professora Alessandra Gonzalez" class="professor-img">
+        <div class="descricao">
+          <h3>Professora Alessandra Gonzalez</h3>
+          <p>Com ampla experiência em artes marciais e uma especialização em defesa pessoal, a Professora Marcia Saraiva
+            dedica-se a promover o desenvolvimento físico e mental de seus alunos. Seu estilo de ensino é focado nos
+            detalhes e na evolução contínua, buscando garantir que cada aluno atinja todo o seu potencial. Marcia se
+            destaca por sua abordagem cuidadosa, oferecendo um ambiente seguro e estimulante para aqueles que buscam
+            aprimorar suas habilidades e autoconfiança.</p>
+          <p>Para conhecer melhor a Professora, é só seguir
+            <a href="https://www.instagram.com/" class="social-icon professor-instagram"><i
+                class="fab fa-instagram"></i></a>
+            </a>
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 

@@ -69,7 +69,7 @@ body {
 
 label[for="bt_menu"]{
 	padding: 5px;
-	background-color: #222;
+	background-color: #333;
 	color: #fff;
 	text-align: center;
 	font-size: 30px;
@@ -89,6 +89,7 @@ label[for="bt_menu"]{
 #tituloP{
     margin-top: 40px;
     text-align: center;
+    color: #333;
 }
 
 .map-section {
