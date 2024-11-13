@@ -5,7 +5,8 @@
 
 .tituloP {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -17,6 +18,7 @@
 }
 
 .professor:nth-child(even) .professor-img {
+  margin-left: 20px;
   order: 2;
 }
 
@@ -40,6 +42,7 @@
 }
 
 .descricao p {
+  margin-top: 25px;
   font-size: 1em;
   color: #555;
   line-height: 1.6;

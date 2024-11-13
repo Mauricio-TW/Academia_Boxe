@@ -53,9 +53,9 @@ header{
     margin-left: auto; 
 }
 
-#menu a:visited,
-#menu a:link{
-	padding: 15px 5px;
+#menu ul li a:visited,
+#menu ul li a:link {
+    padding: 15px 5px;
     padding-bottom: 3px;
     display: inline-block;
     text-align: center;
@@ -66,15 +66,25 @@ header{
     transition: border-bottom 0.3s;
 }
 
-#menu a:hover {
+/* Efeito hover nos itens do menu, exceto no login */
+#menu ul li a:hover {
     border-bottom: 2px solid #fff;
 }
 
+/* Ícone de login sem efeito de hover */
 .login-icon {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
     padding: 6px 10px;
+    border-bottom: none;
+    transition: none;
+}
+
+/* Remove o efeito de hover do ícone de login */
+.login-icon:hover {
+    border-bottom: none;
+    color: #fff;
 }
 
 label[for="bt_menu"]{
@@ -103,8 +113,8 @@ label[for="bt_menu"]{
 }
 
 .map-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
