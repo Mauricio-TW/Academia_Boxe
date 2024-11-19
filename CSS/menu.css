@@ -146,28 +146,49 @@ label[for="bt_menu"]{
 
 /*Footer*/
 .footer-linha-container {
-	background-color:#333;
-	padding: 10px 0;
+    background-color: #333;
+    padding: 10px 0;
 }
 
 .footer-links {
-	display: flex;
-	justify-content: space-between;
-	background-color: #333;
-	color: #fff;
-	padding: 20px 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
 }
 
-.linkdir {
-	margin-right: 70px;
+.linkesq{
+    margin-left: -80%;
+}
+
+.linkdir{
+    margin-left: -30px;
+    margin-right: 50px;
+}
+
+.footer-menu {
+    align-self: center; 
+    margin-left: 60px;
+
+}
+
+.footer-links > div {
+    display: flex;
+    gap: 30px;
 }
 
 .footer-links ul {
-	list-style: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .footer-links li {
-	margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .footer-links a {
