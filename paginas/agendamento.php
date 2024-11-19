@@ -93,7 +93,6 @@
     </div> <!--fim div map-container-->
   </section>
 
-  <!-- Seção do Footer -->
   <div class="footer-linha-container"></div>
 
   <footer>
@@ -113,6 +112,15 @@
           <li><a href="https://senacrs.com.br/hotsite/canal-denuncia/canal_denuncia.php" target="_blank">Denúncia</a>
           </li>
         </ul>
+      </nav>
+      <nav>
+      </nav>
+      <ul class="footer-menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#agendamento">Agendamento</a></li>
+          <li><a href="#professores">Professores</a></li>
+          <li><a href="#espaco">Espaço</a></li>
+      </ul>
       </nav>
     </div><!-- Fim da div footer-links -->
     <nav id="divfooter">
