@@ -61,13 +61,6 @@ body {
     margin-bottom: 20px;
   }
   
-  label {
-    font-size: 1rem;
-    margin-top: 10px;
-    color: var(--cor-escura);
-    text-align: left;
-  }
-  
   input[type="email"],
   input[type="password"] {
     width: 100%;
