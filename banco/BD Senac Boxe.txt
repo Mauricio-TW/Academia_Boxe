@@ -84,4 +84,4 @@ CREATE TABLE pedido_produto (
 );
 
 INSERT INTO usuarios (nome, email, senha, nivel_acesso_id)
-VALUES ('Admin', 'admin@senacboxe.com', 'admin', 1);
+VALUES ('Admin', 'admin@senacboxe.com', SHA2('admin', 256), 1);
