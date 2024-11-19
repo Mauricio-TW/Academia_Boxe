@@ -254,3 +254,85 @@ footer {
 	margin: 0;
 	color: #fff;
 }
+
+/*Responsividade*/
+/*Menu*/
+@media (max-width: 790px) {
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 130px;
+        right: 0; /* Inicia fora da tela à direita */
+        width: 100%;
+        background-color: #333;
+        z-index: 99;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    #bt_menu {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 100;
+        width: 30px;
+        height: 25px;
+    }
+
+    #bt_menu:checked + label + #menu ul {
+        transform: translateX(0); /* Quando o menu for exibido, ele vem da direita para a esquerda */
+        opacity: 1;
+    }
+
+    label[for="bt_menu"] {
+        display: block;
+        padding: 5px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        height: 50px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    .login-icon {
+        position: absolute;
+        top: 15px;
+        right: 70px;
+    }
+
+    label[for="bt_menu"]:before {
+        content: none;
+    }
+
+    /*Footer*/
+    .footer-links > div {
+        gap: 15px;
+    }
+
+    .footer-links ul {
+        gap: 5px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    .linkesq, .linkdir, .footer-menu {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
