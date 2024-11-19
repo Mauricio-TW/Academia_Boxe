@@ -18,71 +18,12 @@
 
   <script src="../script/Script.js"></script>
 
-  <!--Header-->
-  <header>   
+  <!-- cabeçalho -->
+  <?php require('header.php'); ?>
 
-    <!--Navbar-->
-    <div id="nav">
-      <input type="checkbox" id="bt_menu" />
-      <label for="bt_menu">&#9776</label>
-      <nav id="menu">
-        <img src="../Imagens/boxeLogo.png" alt="Logo" class="logo">
-        <ul>
-          <li><a href="index.php">Inicio</a></li>
-          <li><a href="agendamento.php">Agendamento</a></li>
-          <li><a href="professores.php">Professores</a></li>
-          <li><a href="espaco.php">Espaço</a></li>
-          <li><a href="compras.php">Loja</a></li>
-        </ul>
-        <a href="login.php" class="login-icon"><i class="fas fa-user"></i></a>
-      </nav>
-    </div>
-  </header>
+  <!-- carousel -->
+  <?php require('carousel.php'); ?>
 
-
-  <!-- Carousel -->
-  <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-    <!-- Indicators/dots -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    </div>
-
-    <!-- The slideshow/carousel -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../Imagens/academia_01.jpg" alt="Boxe 01" class="d-block" style="width: 100%; height: 550px;">
-        <div class="carousel-caption">
-          <h3>Treino Intenso</h3>
-          <p>Aulas de boxe para fortalecimento físico e mental</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../Imagens/academia_02.jpg" alt="Boxe 02" class="d-block" style="width: 100%; height: 550px;">
-        <div class="carousel-caption">
-          <h3>Técnica Aperfeiçoada</h3>
-          <p>Instrutores experientes ajudando você a aprimorar suas habilidades de boxe</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../Imagens/academia_03.jpg" alt="Boxe 03" class="d-block" style="width: 100%; height: 550px;">
-        <div class="carousel-caption">
-          <h3>Comunidade de Campeões</h3>
-          <p>Junte-se a nós e faça parte de uma comunidade de apaixonados por boxe</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
 
   <!--Seção De Compras-->
   <section class="container mt-5">
@@ -189,45 +130,9 @@
 
   <div class="footer-linha-container"></div>
 
-  <footer>
-    <div class="footer-links">
-      <nav>
-        <ul class="linkesq">
-          <li><a href="https://www.senacrs.com.br/faleconosco" target="_blank">Fale Conosco</a></li>
-          <li><a href="https://www.senacrs.com.br/lgpd" target="_blank">Proteção e Privacidade de Dados - LGPD</a></li>
-          <li><a href="https://trabalhenosistema.com.br/" target="_blank">Trabalhe Conosco</a></li>
-        </ul>
-      </nav>
-      <nav>
-        <ul class="linkdir">
-          <li><a href="https://www.senacrs.com.br/sala-imprensa" target="_blank">Sala de Imprensa</a></li>
-          <li><a href="https://senacrs.com.br/hotsite/pdf/codigo-etica-senacrs-OFICIAL.pdf" target="_blank">Código de
-              Ética</a></li>
-          <li><a href="https://senacrs.com.br/hotsite/canal-denuncia/canal_denuncia.php" target="_blank">Denúncia</a>
-          </li>
-        </ul>
-      </nav>
-      <nav>
-      </nav>
-      <ul class="footer-menu">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#agendamento">Agendamento</a></li>
-          <li><a href="#professores">Professores</a></li>
-          <li><a href="#espaco">Espaço</a></li>
-      </ul>
-      </nav>
-    </div><!-- Fim da div footer-links -->
-    <nav id="divfooter">
-      <a href="https://www.facebook.com/" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://x.com/" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.youtube.com/" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
-    </nav><!-- Fim da div divfooter -->
-    <div id="divfim">
-      <p>&copy; 2024 Senac Boxe. Todos os direitos reservados.</p>
-    </div><!-- Fim da div divfim -->
-  </footer>
+  <!-- footer -->
+  <?php require('footer.php'); ?>
+  
 </body>
 
 </html>
