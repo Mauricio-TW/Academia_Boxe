@@ -15,13 +15,16 @@
 </head>
 
 <body>
-
+<!--MUDAR A FONTE PARA ALGO MAIS ESTILOSO-->
   <!--Header-->
   <header>
     <!--Navbar-->
+    <!--ANCORA NO FOOTER TRAAZER PRA CA-->
     <div id="nav">
-      <input type="checkbox" id="bt_menu" />
-      <label for="bt_menu">&#9776</label>
+      <form action="#">
+        <input type="checkbox" id="bt_menu" />
+        <label for="bt_menu">&#9776</label>
+      </form>
       <nav id="menu">
         <img src="../Imagens/boxeLogo.png" alt="Logo" class="logo">
         <ul>
@@ -86,7 +89,8 @@
   <section id="professores">
     <div class="container">
       <h2 class="tituloP">Nossos Professores</h2>
-      <div class="cardsProf">
+      <div class="cardsProf"
+      >
         <!-- Card 1 -->
         <div class="card">
           <img src="../Imagens/treinador 1.jpg" alt="Foto do Professor João" class="card-img">
@@ -135,6 +139,7 @@
   </section>
 
   <!-- Seção de Modos de Treino -->
+  <!--MAIS ESAPAÇO ENTRE OS ITENS-->
   <h2 id="tituloP">Conheça Nossas Modalidades de Treino</h2>
   <section class="secTrein">
     <div class="treinosAll">
@@ -243,7 +248,8 @@
           <div class="infoItem">
             <i class="fas fa-calendar-alt"></i>
             <p>2 Vezes por semana</p>
-          </div><!--Fim da div infoItem-->
+          </div>
+          <!--Fim da div infoItem-->
           <div class="infoItem">
             <i class="fas fa-battery-quarter treino-intensidade baixa-intensidade"></i>
             <p class="intensidade">Baixa Intensidade</p>
@@ -284,6 +290,7 @@
   <h2 id="tituloP">Venha nos Visitar e conhecer o Espaço</h2>
   <section class="map-section">
     <div class="info">
+      <!--LISTA maybe-->
       <h3>Informações de Contato</h3>
       <p>Endereço: Rua Exemplo, 123, Centro, Porto Alegre, RS, CEP 12345-678</p>
       <p>Telefone: (51) 1234-5678</p>
@@ -295,6 +302,8 @@
         <li>Domingo: Fechado</li>
       </ul>
     </div><!--fim da div info-->
+
+    <!--NA RESPONSIVIDADE TIRAR  O CONTORNO E DEIXAR OCUPAR A TELA TODA-->
     <div class="map-container">
       <div class="frameM">
         <iframe
@@ -302,7 +311,7 @@
           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div><!--fim div frameM-->
-    </div> <!--fim div map-container-->
+    </div><!--fim div map-container-->
   </section>
 
   <!-- Seção do Footer -->
@@ -316,7 +325,7 @@
           <li><a href="https://www.senacrs.com.br/lgpd" target="_blank">Proteção e Privacidade de Dados - LGPD</a></li>
           <li><a href="https://trabalhenosistema.com.br/" target="_blank">Trabalhe Conosco</a></li>
         </ul>
-      </nav>
+      </nav><!--Fim nav-->
       <nav>
         <ul class="linkdir">
           <li><a href="https://www.senacrs.com.br/sala-imprensa" target="_blank">Sala de Imprensa</a></li>
@@ -325,16 +334,15 @@
           <li><a href="https://senacrs.com.br/hotsite/canal-denuncia/canal_denuncia.php" target="_blank">Denúncia</a>
           </li>
         </ul>
-      </nav>
+      </nav><!--Fim nav-->
       <nav>
-      </nav>
-      <ul class="footer-menu">
+        <ul class="footer-menu">
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#agendamento">Agendamento</a></li>
-          <li><a href="#professores">Professores</a></li>
-          <li><a href="#espaco">Espaço</a></li>
-      </ul>
-      </nav>
+          <li><a href="../paginas/agendamento.html">Agendamento</a></li>
+          <li><a href="../paginas/professores.html">Professores</a></li>
+          <li><a href="../paginas/espaco.html">Espaço</a></li>
+        </ul>
+      </nav><!--Fim nav-->
     </div><!-- Fim da div footer-links -->
     <nav id="divfooter">
       <a href="https://www.facebook.com/" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
@@ -344,6 +352,7 @@
       <a href="https://www.youtube.com/" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
     </nav><!-- Fim da div divfooter -->
     <div id="divfim">
+      <!--Fim divfim-->
       <p>&copy; 2024 Senac Boxe. Todos os direitos reservados.</p>
     </div><!-- Fim da div divfim -->
   </footer>
