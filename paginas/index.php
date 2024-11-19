@@ -31,7 +31,7 @@
           <li><a href="espaco.html">Espaço</a></li>
           <li><a href="compras.html">Loja</a></li>
         </ul>
-        <a href="login.html" class="login-icon"><i class="fas fa-user"></i></a>
+        <a href="login.php" class="login-icon"><i class="fas fa-user"></i></a>
       </nav>
     </div>
   </header>

@@ -33,7 +33,7 @@
           
           <li><a href="administrativo.php" class="admin-link">Área Administrativa</a></li>
         </ul>
-        <a href="login.html" class="login-icon"><i class="fas fa-user"></i></a>
+        <a href="login.php" class="login-icon"><i class="fas fa-user"></i></a>
       </nav>
     </div>
   </header>
