@@ -1,3 +1,47 @@
+<?php
+
+require_once '../banco/conexao.php';
+
+session_start();
+
+
+if (isset($_SESSION['usuario_id'])) {
+
+  header("Location: administrativo.php");
+  exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $email = isset($_POST['email']) ? $_POST['email'] : null;
+  $senha = isset($_POST['senha']) ? $_POST['senha'] : null;
+
+  if ($email && $senha) {
+
+    $query = "SELECT * FROM usuarios WHERE email = ? AND senha = SHA2(?, 256)";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ss", $email, $senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+
+      $usuario = $result->fetch_assoc();
+      $_SESSION['usuario_id'] = $usuario['id'];
+      $_SESSION['usuario_nome'] = $usuario['nome'];
+      $_SESSION['usuario_email'] = $usuario['email'];
+
+
+      header("Location: administrativo.php");
+      exit();
+    } else {
+      echo "E-mail ou senha inválidos.";
+    }
+  } else {
+    echo "Por favor, preencha os campos de e-mail e senha.";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,8 +59,7 @@
 </head>
 
 <body class="bg-fundo-claro">
-  
-<!-- cabeçalho -->
+  <!-- cabeçalho -->
   <?php require('header.php'); ?>
 
   <main class="login-container">
@@ -26,12 +69,12 @@
       </div>
       <div class="right-side">
         <h1>LOGIN DE CONTA</h1>
-        <form action="../backend/login.php" method="post">
+        <form action="login.php" method="post">
           <label for="email">EMAIL</label>
-          <input type="email" name="input_email" id="email" required />
+          <input type="email" name="email" id="email" required />
 
           <label for="senha">SENHA</label>
-          <input type="password" name="input_senha" id="senha" required />
+          <input type="password" name="senha" id="senha" required />
 
           <div class="options">
             <div>

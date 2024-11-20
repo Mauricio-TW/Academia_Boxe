@@ -1,3 +1,55 @@
+<?php
+require_once '../banco/conexao.php';
+session_start();
+
+
+if (!isset($_SESSION['usuario_id'])) {
+    die("Acesso negado. Por favor, faça login para continuar.");
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  
+    $data = $_POST['data'];
+    $professor_id = $_POST['professor'];
+
+    
+    $sqlProfessor = "SELECT id FROM professores WHERE id = ?";
+    $stmtProfessor = $conn->prepare($sqlProfessor);
+    $stmtProfessor->bind_param("i", $professor_id);
+    $stmtProfessor->execute();
+    $stmtProfessor->store_result();
+
+  
+    if ($stmtProfessor->num_rows === 0) {
+        echo "<p class='alert alert-danger'>Professor não encontrado. Por favor, selecione um professor válido.</p>";
+    } else {
+       
+        if (empty($data) || empty($professor_id)) {
+            echo "<p class='alert alert-danger'>Por favor, preencha todos os campos.</p>";
+        } else {
+            
+            $sql = "INSERT INTO agendamentos (usuario_id, professor_id, data_agendamento, duracao, status) 
+                    VALUES (?, ?, ?, 60, 'pendente')"; 
+
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("iis", $_SESSION['usuario_id'], $professor_id, $data);
+
+            if ($stmt->execute()) {
+                echo "<p class='alert alert-success'>Agendamento feito com sucesso!</p>";
+            } else {
+                echo "<p class='alert alert-danger'>Erro ao agendar: " . $stmt->error . "</p>";
+            }
+            $stmt->close();
+
+           
+            header("Location: agendamento.php");
+            exit();
+        }
+    }
+    $stmtProfessor->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,8 +68,8 @@
 
 <body>
 
- <!-- cabeçalho -->
- <?php require('header.php'); ?>
+  <!-- cabeçalho -->
+  <?php require('header.php'); ?>
 
   <!-- Seção Agendamento-->
   <div class="container mt-5">
@@ -32,16 +84,16 @@
         <form id="formulario-agendamento" action="agendamento.php" method="POST">
           <div class="mb-3">
             <label for="data" class="form-label">Data do Treino:</label>
-            <input type="date" id="data" name="data" class="form-control" required>
+            <input type="datetime-local" id="data" name="data" class="form-control" required>
           </div>
           <div class="mb-3">
             <label for="professor" class="form-label">Professor:</label>
             <select id="professor" name="professor" class="form-select" required>
               <option value="" disabled selected>Selecione o Professor</option>
-              <option value="joao">Professor João Silva</option>
-              <option value="maria">Professora Maria Santos</option>
-              <option value="jorge">Professor Jorge Schmidt</option>
-              <option value="marcia">Professora Marcia Saraiva</option>
+              <option value="9">Professor João Silva</option>
+              <option value="10">Professora Maria Santos</option>
+              <option value="11">Professor Carlos Oliveira</option>
+              <option value="12">Professora Marcia Saraiva</option>
             </select>
           </div>
           <button type="submit" class="btn btn-gold">Agendar Treino</button>
@@ -49,6 +101,24 @@
       </div><!--Fim da div card-body-->
     </div><!--Fim da div Card-->
   </div><!--Fim da div container mt-5-->
+
+  <!-- Seção de Opinião -->
+  <div class="container mt-5">
+    <h3 class="text-center">Deixe Sua Opinião</h3>
+    <div class="card">
+      <div class="card-body">
+        <p>Nos conte o que achou ou compartilhe suas sugestões. Sua opinião é muito importante para nós!</p>
+        <form id="formulario-opiniao" action="#" method="POST">
+          <div class="mb-3">
+            <label for="opiniao" class="form-label">Sua Opinião:</label>
+            <textarea id="opiniao" name="opiniao" class="form-control" rows="4" placeholder="Escreva aqui..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Publicar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Seção do Mapa -->
   <?php require('mapa.php'); ?>
