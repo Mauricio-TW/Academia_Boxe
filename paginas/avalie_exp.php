@@ -71,44 +71,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- cabeçalho -->
   <?php require('header.php'); ?>
 
-  <!-- Seção Agendamento-->
-  <div class="container mt-5">
-    <h2 class="text-center">Agende Seu Treino Gratuito e Comece Sua Jornada de Melhoramento!</h2>
+    <!-- Seção Avaliação -->
+    <div class="container mt-5">
+    <h2 class="text-center">Avalie Sua Experiência!</h2>
     <div class="card">
-      <div class="card-header bg-gold text-white">
-        Agende Aqui o seu treino teste sem custo e comece sua jornada com a gente!
-      </div>
       <div class="card-body">
-        <p>O treino pode ser marcado sem custos com o objetivo de experimentar. Aproveite também essa oportunidade para
-          conhecer nossas instalações e profissionais!</p>
-        <form id="formulario-agendamento" action="agendamento.php" method="POST">
+        <p>Nos conte o que achou sobre nossos serviços. Sua opinião é muito importante para nós!</p>
+        <form id="formulario-avaliacao" action="processa_avaliacao.php" method="POST">
           <div class="mb-3">
-            <label for="data" class="form-label">Data do Treino:</label>
-            <input type="datetime-local" id="data" name="data" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="professor" class="form-label">Professor:</label>
-            <select id="professor" name="professor" class="form-select" required>
-              <option value="" disabled selected>Selecione o Professor</option>
-              <option value="9">Professor João Silva</option>
-              <option value="10">Professora Maria Santos</option>
-              <option value="11">Professor Carlos Oliveira</option>
-              <option value="12">Professora Marcia Saraiva</option>
+            <label for="avaliacao-professor" class="form-label">O que achou do professor?</label>
+            <select id="avaliacao-professor" name="avaliacao_professor" class="form-select" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="bom">Bom</option>
+              <option value="medio">Médio</option>
+              <option value="ruim">Ruim</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-gold">Agendar Treino</button>
+          <div class="mb-3">
+            <label for="avaliacao-aula" class="form-label">O que achou da aula?</label>
+            <select id="avaliacao-aula" name="avaliacao_aula" class="form-select" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="bom">Bom</option>
+              <option value="medio">Médio</option>
+              <option value="ruim">Ruim</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="avaliacao-espaco" class="form-label">O que achou do espaço?</label>
+            <select id="avaliacao-espaco" name="avaliacao_espaco" class="form-select" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="bom">Bom</option>
+              <option value="medio">Médio</option>
+              <option value="ruim">Ruim</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="sugestao" class="form-label">Caso tenha alguma sugestão:</label>
+            <textarea id="sugestao" name="sugestao" class="form-control" rows="4" placeholder="Escreva aqui..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Enviar Avaliação</button>
         </form>
-      </div><!--Fim da div card-body-->
-    </div><!--Fim da div Card-->
-  </div><!--Fim da div container mt-5-->
-
-<!-- Seção de Avaliação -->
-<div class="container mt-5">
-  <h3 class="text-center">Se já fez sua aula e curtiu, Avalie sua experiência!</h3>
-  <div class="d-flex justify-content-center">
-    <a href="avalie_exp.php" class="btn btn-gold btn-lg">Avaliar Experiência</a>
+      </div>
+    </div>
   </div>
-</div>
 
   <!-- Seção do Mapa -->
   <?php require('mapa.php'); ?>
