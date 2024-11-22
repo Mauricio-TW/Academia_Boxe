@@ -1,69 +1,30 @@
-<?php
-require_once '../banco/conexao.php';
-session_start();
-
-
-if (!isset($_SESSION['usuario_id'])) {
-    die("Acesso negado. Por favor, faça login para continuar.");
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  
-    $data = $_POST['data'];
-    $professor_id = $_POST['professor'];
-
-    
-    $sqlProfessor = "SELECT id FROM professores WHERE id = ?";
-    $stmtProfessor = $conn->prepare($sqlProfessor);
-    $stmtProfessor->bind_param("i", $professor_id);
-    $stmtProfessor->execute();
-    $stmtProfessor->store_result();
-
-  
-    if ($stmtProfessor->num_rows === 0) {
-        echo "<p class='alert alert-danger'>Professor não encontrado. Por favor, selecione um professor válido.</p>";
-    } else {
-       
-        if (empty($data) || empty($professor_id)) {
-            echo "<p class='alert alert-danger'>Por favor, preencha todos os campos.</p>";
-        } else {
-            
-            $sql = "INSERT INTO agendamentos (usuario_id, professor_id, data_agendamento, duracao, status) 
-                    VALUES (?, ?, ?, 60, 'pendente')"; 
-
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("iis", $_SESSION['usuario_id'], $professor_id, $data);
-
-            if ($stmt->execute()) {
-                echo "<p class='alert alert-success'>Agendamento feito com sucesso!</p>";
-            } else {
-                echo "<p class='alert alert-danger'>Erro ao agendar: " . $stmt->error . "</p>";
-            }
-            $stmt->close();
-
-           
-            header("Location: agendamento.php");
-            exit();
-        }
-    }
-    $stmtProfessor->close();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../CSS/agendamento.css">
-  <link rel="stylesheet" href="../CSS/menu.css">
-  <meta name="author" content="Mauricio T Welter">
-  <title>Senac Boxe</title>
-  <link rel="icon" href="../Imagens/logoMini.png" type="Logo">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/administrativo.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <meta name="author" content="Mauricio T Welter">
+    <title>Senac Boxe</title>
+    <link rel="icon" href="../Imagens/logoMini.png" type="Logo">
+    <style>
+        
+        .btn-gold {
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+
+        .btn-gold:hover {
+            background-color: #777;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>

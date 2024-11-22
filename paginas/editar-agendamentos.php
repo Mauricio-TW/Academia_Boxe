@@ -2,11 +2,11 @@
 require_once '../banco/conexao.php';
 session_start();
 
-
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: login.php");
     exit();
 }
+
 if (isset($_GET['excluir'])) {
     $agendamento_id = $_GET['excluir'];
 
@@ -50,7 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
 
 $sql = "SELECT a.id, a.data_agendamento, a.status, p.nome AS professor
         FROM agendamentos a
-        JOIN professores p ON a.professor_id = p.id";
+        JOIN professores p ON a.professor_id = p.id
+        ORDER BY a.data_agendamento ASC";  
 $result = $conn->query($sql);
 ?>
 
@@ -58,37 +59,22 @@ $result = $conn->query($sql);
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../CSS/administrativo.css">
     <link rel="stylesheet" href="../CSS/menu.css">
-    <link rel="stylesheet" href="../CSS/editar-agendamentos.css">
-    <title>Editar Agendamentos</title>
+    <meta name="author" content="Mauricio T Welter">
+    <title>Editar Agendamentos - Senac Boxe</title>
+    <link rel="icon" href="../Imagens/logoMini.png" type="Logo">
 </head>
 
 <body>
 
-    <header>
-
-        <div id="nav">
-            <input type="checkbox" id="bt_menu" />
-            <label for="bt_menu">&#9776;</label>
-            <nav id="menu">
-                <img src="../Imagens/boxeLogo.png" alt="Logo" class="logo">
-                <ul>
-                    <li><a href="index.php">Início</a></li>
-                    <li><a href="agendamento.php">Agendamento</a></li>
-                    <li><a href="professores.php">Professores</a></li>
-                    <li><a href="espaco.php">Espaço</a></li>
-                    <li><a href="compras.php">Loja</a></li>
-                    <li><a href="administrativo.php">Administrativo</a></li>
-                    <li><a href="logout.php">Sair</a></li>
-                </ul>
-                <a href="login.php" class="login-icon"><i class="fas fa-user"></i></a>
-            </nav>
-        </div>
-    </header>
+    <!-- cabeçalho -->
+    <?php require('headeradm.php'); ?>
 
     <main class="container">
         <h1 class="mt-4">Editar Agendamentos</h1>
@@ -104,7 +90,6 @@ $result = $conn->query($sql);
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Data do Agendamento</th>
                     <th>Professor</th>
                     <th>Status</th>
@@ -114,7 +99,6 @@ $result = $conn->query($sql);
             <tbody>
                 <?php while ($agendamento = $result->fetch_assoc()): ?>
                     <tr>
-                        <td><?php echo $agendamento['id']; ?></td>
                         <td><?php echo date('d/m/Y H:i', strtotime($agendamento['data_agendamento'])); ?></td>
                         <td><?php echo $agendamento['professor']; ?></td>
                         <td><?php echo ucfirst($agendamento['status']); ?></td>
@@ -127,11 +111,9 @@ $result = $conn->query($sql);
             </tbody>
         </table>
 
-
         <?php if (isset($_GET['id'])): ?>
             <?php
             $agendamento_id = $_GET['id'];
-
 
             $sqlEdit = "SELECT a.id, a.data_agendamento, a.status, a.professor_id, p.nome AS professor
                         FROM agendamentos a

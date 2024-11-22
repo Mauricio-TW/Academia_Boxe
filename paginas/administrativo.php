@@ -1,17 +1,34 @@
 <?php
-
 require_once '../banco/conexao.php';
 session_start();
-
 
 if (!isset($_SESSION['usuario_id'])) {
   header("Location: login.php");
   exit();
 }
 
-
 $usuario_nome = $_SESSION['usuario_nome'];
 $usuario_email = $_SESSION['usuario_email'];
+
+$usuario_id = $_SESSION['usuario_id'];
+$sql = "SELECT nivel_acesso_id FROM usuarios WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $usuario_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+  $row = $result->fetch_assoc();
+  if ($row['nivel_acesso_id'] != 1) {
+    header("Location: index.php");
+    exit();
+  }
+} else {
+  header("Location: login.php");
+  exit();
+}
+
+$stmt->close();
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +49,7 @@ $usuario_email = $_SESSION['usuario_email'];
 
 <body>
 
-
   <header>
-
     <div id="nav">
       <input type="checkbox" id="bt_menu" />
       <label for="bt_menu">&#9776;</label>
@@ -56,12 +71,13 @@ $usuario_email = $_SESSION['usuario_email'];
   <main class="container">
     <h1 class="text-center mt-5">Bem-vindo à Área Administrativa</h1>
 
-    <!-- Exibe o nome e email do usuário logado -->
+    
     <div class="admin-info">
       <h3>Olá, <?php echo $usuario_nome; ?>!</h3>
       <p>Email: <?php echo $usuario_email; ?></p>
       <p>Aqui você pode gerenciar o conteúdo do site.</p>
     </div>
+
 
     <div class="admin-options">
       <h4>Opções de Administração</h4>
@@ -69,9 +85,51 @@ $usuario_email = $_SESSION['usuario_email'];
         <li><a href="gerenciar-usuarios.php">Gerenciar Usuários</a></li>
         <li><a href="editar-professores.php">Editar Professores</a></li>
         <li><a href="editar-agendamentos.php">Editar agendamento</a></li>
-        <li><a href="editar-espaco.php?id=1">Editar Espaço</a></li>
-
+        <li><a href="editar-loja.php?id=1">Editar loja</a></li>
       </ul>
+    </div>
+
+    <!-- Tabela de mensagens -->
+    <div class="container mt-5">
+      <h2 class="text-center">Mensagens Recebidas</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Usuário</th>
+              <th>Avaliação Professor</th>
+              <th>Avaliação Aula</th>
+              <th>Avaliação Espaço</th>
+              <th>Sugestão</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $sql = "SELECT mensagens.*, usuarios.nome AS usuario_nome 
+                                FROM mensagens 
+                                JOIN usuarios ON mensagens.usuario_id = usuarios.id 
+                                ORDER BY mensagens.data_criacao DESC";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+              while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                              <td>{$row['usuario_nome']}</td>
+                              <td>{$row['avaliacao_professor']}</td>
+                              <td>{$row['avaliacao_aula']}</td>
+                              <td>{$row['avaliacao_espaco']}</td>
+                              <td>" . htmlspecialchars($row['sugestao']) . "</td>
+                              <td>" . date('d/m/Y', strtotime($row['data_criacao'])) . "</td>
+                          </tr>";
+              }
+            } else {
+              echo "<tr><td colspan='7'>Nenhuma mensagem encontrada.</td></tr>";
+            }
+            ?>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 

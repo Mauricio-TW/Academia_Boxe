@@ -18,17 +18,17 @@ if (isset($_POST['adicionar_usuario'])) {
     $senha = $_POST['senha'];
     $nivel_acesso = $_POST['nivel_acesso'];
 
-  
+
     $sql_check_email = "SELECT id FROM usuarios WHERE email = '$email'";
     $resultado_check = $conn->query($sql_check_email);
 
     if ($resultado_check->num_rows > 0) {
         echo "<div class='alert alert-danger'>O email '$email' já está cadastrado!</div>";
     } else {
-    
+
         $senha_hash = hash('sha256', $senha);
 
-        
+
         $sql_insert = "INSERT INTO usuarios (nome, email, senha, nivel_acesso_id) VALUES ('$nome', '$email', '$senha_hash', '$nivel_acesso')";
         if ($conn->query($sql_insert) === TRUE) {
             echo "<div class='alert alert-success'>Usuário adicionado com sucesso!</div>";
@@ -56,46 +56,28 @@ if ($resultado->num_rows > 0) {
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../CSS/administrativo.css">
-  <link rel="stylesheet" href="../CSS/menu.css">
-  <meta name="author" content="Mauricio T Welter">
-  <title>Administração - Senac Boxe</title>
-  <link rel="icon" href="../Imagens/logoMini.png" type="Logo">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/administrativo.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="../CSS/editar-agendamentos.css">
+    <meta name="author" content="Mauricio T Welter">
+    <title>Gerenciar usuarios - Senac Boxe</title>
+    <link rel="icon" href="../Imagens/logoMini.png" type="Logo">
 </head>
 
 
 <body>
-
-    <header>
-
-        <div id="nav">
-            <input type="checkbox" id="bt_menu" />
-            <label for="bt_menu">&#9776;</label>
-            <nav id="menu">
-                <img src="../Imagens/boxeLogo.png" alt="Logo" class="logo">
-                <ul>
-                    <li><a href="index.php">Início</a></li>
-                    <li><a href="agendamento.php">Agendamento</a></li>
-                    <li><a href="professores.php">Professores</a></li>
-                    <li><a href="espaco.php">Espaço</a></li>
-                    <li><a href="compras.php">Loja</a></li>
-                    <li><a href="administrativo.php">Administrativo</a></li>
-                    <li><a href="logout.php">Sair</a></li>
-                </ul>
-                <a href="login.php" class="login-icon"><i class="fas fa-user"></i></a>
-            </nav>
-        </div>
-    </header>
+    <!-- cabeçalho -->
+    <?php require('headeradm.php'); ?>
 
     <main class="container">
         <h1 class="text-center mt-5">Gerenciar Usuários</h1>
 
-        
+
         <div class="admin-info">
             <h3>Olá, <?php echo $usuario_nome; ?>!</h3>
             <p>Email: <?php echo $usuario_email; ?></p>
@@ -126,7 +108,7 @@ if ($resultado->num_rows > 0) {
             <button type="submit" name="adicionar_usuario" class="btn btn-primary">Adicionar Usuário</button>
         </form>
 
-       
+
         <table class="table table-bordered mt-4">
             <thead>
                 <tr>
@@ -142,20 +124,20 @@ if ($resultado->num_rows > 0) {
                 <?php
                 if (!empty($usuarios)) {
                     foreach ($usuarios as $usuario) {
-                       
+
                         $foto_usuario = isset($usuario['foto']) ? $usuario['foto'] : null;
-                        
+
                         echo "<tr>";
-                        
-                       
+
+
                         echo "<td>";
                         if ($foto_usuario && file_exists($foto_usuario)) {
                             echo "<img src='" . $foto_usuario . "' alt='Foto' class='img-thumbnail' style='width: 70px; height: 70px; object-fit: cover;'>";
                         } else {
-                            echo "<i class='fas fa-user-circle' style='font-size: 70px;'></i>"; 
+                            echo "<i class='fas fa-user-circle' style='font-size: 70px;'></i>";
                         }
                         echo "</td>";
-                        
+
                         echo "<td>" . $usuario['id'] . "</td>";
                         echo "<td>" . $usuario['nome'] . "</td>";
                         echo "<td>" . $usuario['email'] . "</td>";

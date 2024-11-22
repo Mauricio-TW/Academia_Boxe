@@ -12,6 +12,7 @@
         <li><a href="professores.php">Professores</a></li>
         <li><a href="espaco.php">Espaço</a></li>
         <li><a href="compras.php">Loja</a></li>
+        <li><a href="logout.php">Sair</a></li>
       </ul>
       <a href="login.php" class="login-icon"><i class="fas fa-user"></i></a>
     </nav>

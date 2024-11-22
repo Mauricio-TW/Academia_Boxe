@@ -29,88 +29,39 @@
   <section class="container mt-5">
     <h2 class="text-center text-danger mb-4">Compre Aqui Seu Equipamento</h2>
     <div class="row">
+      <?php
+      // Conexão com o banco de dados
+      require_once('../banco/conexao.php');
 
-      <!-- Item 1: Luvas de Boxe -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="../Imagens/luvas.jpg" height="300px" width="300px" alt="Luvas de Boxe" class="card-img-top">
-          <div class="card-body">
-            <h3 class="card-title">Luvas de Boxe</h3>
-            <p class="card-text">Luvas de alta qualidade para treinamento.</p>
-            <h4 class="card-text text-danger">R$ 99,99</h4>
-            <button class="btn btn-danger btn-block" onclick="addToCart('luvas')">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
+      // Busca os produtos da tabela 'produtos'
+      $sql = "SELECT * FROM produtos";
+      $result = $conn->query($sql);
 
-      <!-- Item 2: Protetor Bucal -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="../Imagens/protetorB.jpg" height="300px" width="300px" alt="Protetor Bucal"
-            class="card-img-top">
-          <div class="card-body">
-            <h3 class="card-title">Protetor Bucal</h3>
-            <p class="card-text">Proteja seus dentes durante os treinos.</p>
-            <h4 class="card-text text-danger">R$ 19,99</h4>
-            <button class="btn btn-danger btn-block" onclick="addToCart('protetorBucal')">Adicionar ao Carrinho</button>
+      // Verifica se há produtos na tabela e exibe-os
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()):
+      ?>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <!-- Exibe a imagem do produto -->
+              <img src="<?php echo $row['imagem']; ?>" height="300px" alt="<?php echo $row['nome']; ?>" class="card-img-top">
+              <div class="card-body">
+                <!-- Exibe o nome e a descrição do produto -->
+                <h3 class="card-title"><?php echo $row['nome']; ?></h3>
+                <p class="card-text"><?php echo $row['descricao']; ?></p>
+                <!-- Exibe o preço formatado -->
+                <h4 class="card-text text-danger">R$ <?php echo number_format($row['preco'], 2, ',', '.'); ?></h4>
+                <!-- Botão para adicionar ao carrinho -->
+                <button class="btn btn-danger btn-block" onclick="addToCart('<?php echo $row['nome']; ?>')">Adicionar ao Carrinho</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Item 3: Saco de Pancada -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="../Imagens/sacoPancada.png" height="277px" width="300px" alt="Saco de Pancada"
-            class="card-img-top">
-          <div class="card-body">
-            <h3 class="card-title">Saco de Pancada</h3>
-            <p class="card-text">Treine sua potência de soco com nosso saco de pancada.</p>
-            <h4 class="card-text text-danger">R$ 149,99</h4>
-            <button class="btn btn-danger btn-block" onclick="addToCart('sacoPancada')">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4: Bandagens -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="../Imagens/atadura.jpg" height="300px" width="300px" alt="Bandagem de Boxe" class="card-img-top">
-          <div class="card-body">
-            <h3 class="card-title">Bandagem de Boxe</h3>
-            <p class="card-text">Bandagem elástica para proteger as mãos e os pulsos.</p>
-            <h4 class="card-text text-danger">R$ 14,99</h4>
-            <button class="btn btn-danger btn-block" onclick="addToCart('bandagens')">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5: Protetor de Cabeça -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="../Imagens/protetor_cabeca.jpg" height="300px" width="300px" alt="Protetor de Cabeça"
-            class="card-img-top">
-          <div class="card-body">
-            <h3 class="card-title">Protetor de Cabeça</h3>
-            <p class="card-text">Proteja sua cabeça e rosto durante os sparrings.</p>
-            <h4 class="card-text text-danger">R$ 49,99</h4>
-            <button class="btn btn-danger btn-block" onclick="addToCart('protetorCabeca')">Adicionar ao
-              Carrinho</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 6: Short de Boxe -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="../Imagens/short.jpg" height="277px" width="300px" alt="Short de Boxe" class="card-img-top">
-          <div class="card-body">
-            <h3 class="card-title">Short de Boxe</h3>
-            <p class="card-text">Short resistente e confortável para treinos de alta intensidade.</p>
-            <h4 class="card-text text-danger">R$ 34,99</h4>
-            <button class="btn btn-danger btn-block" onclick="addToCart('shortBoxe')">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
+      <?php
+        endwhile;
+      } else {
+        echo "<p>Nenhum produto encontrado.</p>";
+      }
+      ?>
     </div>
 
     <div class="container mt-5">
@@ -126,7 +77,6 @@
 
   <!--Espaço entre Grafico e Mapa-->
   <div class="mt-3"></div>
-
 
   <div class="footer-linha-container"></div>
 
