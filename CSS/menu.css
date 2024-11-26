@@ -110,6 +110,7 @@ label[for="bt_menu"]{
     margin-top: 40px;
     text-align: center;
     color: #333;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .map-section {
@@ -127,6 +128,27 @@ label[for="bt_menu"]{
     flex: 1 1 40%; /* Define que o item ocupa 40% da largura do container */
     padding: 20px;
     text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info ul {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0;
+}
+
+.info ul li {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.5;
+}
+
+.info ul ul {
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.info ul ul li {
+    margin-bottom: 5px;
 }
 
 .map-container {
@@ -317,6 +339,28 @@ footer {
         content: none;
     }
 
+    /*Mapa*/
+    .map-container {
+        border: none; /* Remove a borda do mapa */
+        margin: 0; /* Remove qualquer margem */
+        padding: 0; /* Remove qualquer padding */
+        width: 100vw; /* Faz com que o mapa ocupe 100% da largura da tela */
+        max-width: 100%; /* Garante que o mapa não ultrapasse a largura da tela */
+    }
+
+    .map-container iframe {
+        width: 100vw; /* Faz com que o iframe ocupe 100% da largura da tela */
+        height: 300px; /* Ajusta a altura do mapa (reduzida) */
+        border: none; /* Remove a borda do iframe */
+    }
+
+    /* Link para o Google Maps */
+    .map-container a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     /*Footer*/
     .footer-links > div {
         gap: 15px;
@@ -334,5 +378,9 @@ footer {
     .linkesq, .linkdir, .footer-menu {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .footer-menu{
+        margin-right: 20px;
     }
 }

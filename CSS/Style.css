@@ -2,22 +2,27 @@
 
 .container h2.text-center {
   color: #333 !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2.text-center.text-danger {
   color: #333;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-title {
   color: #333;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-body h4.card-text {
   color: #333 !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-text.text-danger {
   color: #333;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-danger {
