@@ -116,6 +116,10 @@ body {
 
 /*Responsividade*/
 @media (max-width: 790px) {
+  body {
+    overflow-x: hidden; 
+  }
+
   .about-image-container {
     display: flex;
     justify-content: center;
@@ -137,14 +141,11 @@ body {
     display: block;
     margin: 0 auto;
     border-radius: 0;
-  }
 
-  .about-text-container h2 {
-    margin-bottom: 40px;
-  }
+  } 
 
   #sobre h2 {
-    margin-top: 30px;
+    margin-top: auto;
   }
 
   .about-text-container p {
@@ -181,4 +182,31 @@ body {
   .section-galery ul li {
     width: 100%;
   }
+}
+
+/* Estilo a partir de 1200px */
+@media (max-width: 1200px) {
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .about-image-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-image-container img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+
 }

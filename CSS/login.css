@@ -124,3 +124,14 @@ body {
     max-width: 300px;
     margin-top: 20px;
   }
+
+  @media (max-width: 790px) {
+    .left-side {
+      display: none;
+    }
+  
+    .right-side {
+      flex: 1;
+      border-radius: 10px;
+    }
+  }

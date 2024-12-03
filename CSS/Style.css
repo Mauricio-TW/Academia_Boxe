@@ -44,3 +44,30 @@ h2.text-center.text-danger {
   background-color: #6c757d;
   color: white;
 }
+
+@media (max-width: 1399px) {
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-title, .card-text, .btn {
+    margin-bottom: 10px;
+  }
+}

@@ -140,7 +140,7 @@ body {
 }
 
 /* Responsividade para Professores */
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .cardsProf {
         justify-content: center;
     }
@@ -151,14 +151,14 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .card {
         width: 100%;
     }
 }
 
 /* Responsividade para Treinos */
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .treinosAll {
         justify-content: center;
     }
@@ -168,14 +168,14 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .treino {
         flex: 0 1 100%;
     }
 }
 
 /* Responsividade para Mapa */
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .map-section {
         flex-direction: column-reverse;
     }
@@ -192,8 +192,53 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .map-container {
         height: 300px;
+    }
+}
+
+/*Responsividade Treinos para telas menores*/
+@media only screen and (max-width: 1040px) {
+    .treinosAll {
+        justify-content: center;
+    }
+
+    .treino {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .treinosAll {
+        justify-content: center;
+    }
+
+    .treino {
+        flex: 0 1 100%;
+    }
+}
+
+/*Responsividade Cards 1399*/
+@media only screen and (max-width: 1399px) {
+    .cardsProf {
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(50% - 15px);
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsividade para telas de até 790px */
+@media only screen and (max-width: 790px) {
+    .cardsProf {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }

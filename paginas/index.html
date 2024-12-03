@@ -38,43 +38,68 @@
   </header>
 
   <!-- Carousel -->
-  <!--AJEITAR A QUALIDADE DAS IMAGENS PARA DIFERENTES TAMANHOS DE TELA-->
-  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
       <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
     </div>
-
+  
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../Imagens/academia_01.jpg" alt="Foto Luvas de Boxe" class="d-block"
-          style="width: 100%; height: 550px;">
+        <picture>
+          <!-- Para telas acima de 1399px -->
+          <source media="(min-width: 1399px)" srcset="../Imagens/academia_01.jpg">
+          
+          <!-- Para telas entre 790px e 1399px-->
+          <source media="(min-width: 790px)" srcset="../Imagens/academia_01_media.jpg">
+  
+          <!-- Para telas abaixo de 790px -->
+          <img src="../Imagens/academia_01_pequena.jpg" alt="Foto Luvas de Boxe" class="d-block" style="width: 100%; height: 550px;">
+        </picture>
         <div class="carousel-caption">
           <h3>Treino Intenso</h3>
           <p>Aulas de boxe para fortalecimento físico e mental</p>
         </div>
       </div>
+  
       <div class="carousel-item">
-        <img src="../Imagens/academia_02.jpg" alt="Foto Boxeadora socando a Tela" class="d-block"
-          style="width: 100%; height: 550px;">
+        <picture>
+          <!-- Para telas acima de 1399px -->
+          <source media="(min-width: 1399px)" srcset="../Imagens/academia_02.jpg">
+  
+          <!-- Para telas entre 790px e 1399px -->
+          <source media="(min-width: 790px)" srcset="../Imagens/academia_02_media.jpg">
+  
+          <!-- Para telas abaixo de 790px -->
+          <img src="../Imagens/academia_02_pequena.jpg" alt="Foto Boxeadora socando a Tela" class="d-block" style="width: 100%; height: 550px;">
+        </picture>
         <div class="carousel-caption">
           <h3>Técnica Aperfeiçoada</h3>
           <p>Instrutores experientes ajudando você a aprimorar suas habilidades de boxe</p>
         </div>
       </div>
+  
       <div class="carousel-item">
-        <img src="../Imagens/academia_03.jpg" alt="Foto Lutadores de Boxe" class="d-block"
-          style="width: 100%; height: 550px;">
+        <picture>
+          <!-- Para telas acima de 1399px -->
+          <source media="(min-width: 1399px)" srcset="../Imagens/academia_03.jpg">
+  
+          <!-- Para telas entre 790px e 1399px -->
+          <source media="(min-width: 790px)" srcset="../Imagens/academia_03_media.jpg">
+  
+          <!-- Para telas abaixo de 790px -->
+          <img src="../Imagens/academia_03_pequena.jpg" alt="Foto Lutadores de Boxe" class="d-block" style="width: 100%; height: 550px;">
+        </picture>
         <div class="carousel-caption">
           <h3>Comunidade de Campeões</h3>
           <p>Junte-se a nós e faça parte de uma comunidade de apaixonados por boxe</p>
         </div>
       </div>
     </div>
-
+  
     <!-- Left and right controls/icons -->
     <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -89,8 +114,7 @@
     <div class="container">
       <h2 class="tituloP">Nossos Professores</h2>
       <div class="cardsProf"
-      ><!--MANTER SEMPRE 2-->
-        <!-- Card 1 -->
+      ><!-- Card 1 -->
         <div class="card">
           <img src="../Imagens/treinador 1.jpg" alt="Foto do Professor João" class="card-img">
           <div class="corpoCard">
@@ -138,7 +162,6 @@
   </section>
 
   <!-- Seção de Modos de Treino -->
-  <!--A PARTIR DE 1040 QUEBRAR PARA 2-->
   <h2 id="tituloP" class="tituloTreino">Conheça Nossas Modalidades de Treino</h2>
   <section class="secTrein">
     <div class="treinosAll">
@@ -285,7 +308,6 @@
   </section>
 
   <!-- Seção do Mapa -->
-  <!--A PARTIR DE 1499 DESCER O MAPA E FAZER A LARGURA OCUPAR TODA A ETLA E CENTRALIZAR O TEXTO-->
   <h2 id="tituloP">Venha nos Visitar e conhecer o Espaço</h2>
   <section class="map-section">
     <div class="info">
